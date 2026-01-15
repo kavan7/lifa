@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* half width because we duplicate the row */
+}
+
+/* utility class for the animation */
+.animate-marquee {
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* optional: pause on hover */
+.group:hover .animate-marquee {
+  animation-play-state: paused;
+}
