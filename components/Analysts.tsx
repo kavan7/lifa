@@ -106,7 +106,7 @@ export default function ResearchCohort() {
   const [openWif, setOpenWif] = useState(false);
 
   return (
-    <section className="relative bg-[#0f1117] py-32 px-6 md:px-12 overflow-hidden border-t border-white/5">
+    <section className="relative bg-[#0f1117] py-32 px-6 md:px-12 overflow-hidden border-t border-white/5" id="analysts">
       
       {/* --- REFINED BACKGROUND SYSTEM --- */}
       <div className="absolute top-0 left-0 w-[70%] h-[70%] bg-slate-800/10 rounded-full blur-[140px] pointer-events-none z-0" />
@@ -146,7 +146,7 @@ export default function ResearchCohort() {
         </div>
 
         {/* ACTIVE COHORT PODS */}
-        <div className="space-y-48">
+        <div className="space-y-28">
           {COHORT_DATA.map((pod, pIdx) => (
             <SectorPod key={pIdx} pod={pod} />
           ))}
@@ -238,7 +238,7 @@ export default function ResearchCohort() {
 function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }) {
   return (
     <div className={clsx("relative", isArchive && "opacity-60 hover:opacity-100 transition-opacity duration-500")}>
-      <div className="flex items-center gap-6 mb-20">
+      <div className="flex items-center gap-6 mb-10">
         <div className="flex items-center gap-4 bg-white/[0.02] border border-white/10 px-6 py-2.5 backdrop-blur-2xl rounded-sm">
           <Globe size={12} className={isArchive ? "text-zinc-500" : "text-red-800"} />
           <h3 className="font-sans font-bold text-[10px] uppercase tracking-[0.4em] text-zinc-200">{pod.sector}</h3>

@@ -137,9 +137,9 @@ function HistoryAndStats() {
               hasBorder 
             />
             <StatItem 
-              value="12" 
+              value="7" 
               label="Sectors Covered" 
-              detail="Global equity coverage" 
+              detail="North American equity coverage" 
               hasBorder 
             />
           </div>

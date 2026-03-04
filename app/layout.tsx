@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LIFA",
+  title: "LIFA | Exceptional Ideas, Practiced.",
   description: "Laurier Investment & Finance Association",
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
         
         {/* FULLSCREEN background image */}
         <Image
-          src="/background.jpg"
+          src="/newest-background-best.jpg"
           alt=""
           fill
        
@@ -38,7 +38,7 @@ export default function RootLayout({
           priority
           className=" -z-10"
         />
-        <div className="absolute inset-0 bg-gray-900/60 -z-10" />
+        <div className="absolute inset-0 bg-zinc-950/50 -z-10" />
 
         {/* CENTERED MAX-WIDTH SITE CONTAINER */}
         <div className="mx-auto w-full ">
