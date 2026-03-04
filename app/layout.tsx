@@ -26,28 +26,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-zinc-950`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-[#050505]`}>
         
-        {/* --- REFINED BACKGROUND ENGINE --- */}
-        <div className="fixed inset-0 -z-10 h-screen w-screen overflow-hidden">
+        {/* --- PRISTINE BACKGROUND ENGINE --- */}
+        <div className="fixed inset-0 -z-10 h-screen w-screen overflow-hidden bg-[#050505]">
           <Image
             src="/newest-background-best.jpg"
             alt="LIFA Background"
             fill
-            /* We use 'cover' but lock the position to the top. 
-               This keeps the framing consistent on desktop.
+            /* THE QUALITY TRIFECTA:
+               1. quality={100}: Stops Next.js from lowering the bit-rate.
+               2. unoptimized: Prevents resizing/re-encoding, keeping the original file bits.
+               3. priority: Loads this first so it doesn't "pop" in low-res.
             */
-            style={{ objectFit: "cover", objectPosition: "50% 0%" }}
+            quality={100}
+            unoptimized 
             priority
+            style={{ 
+              objectFit: "cover", 
+              objectPosition: "top center",
+            }}
             className="opacity-100"
           />
           
-          {/* THE FIX: A dual-layer gradient.
-              Layer 1: General dimming for text readability.
-              Layer 2: A heavy fade at the bottom to blend into the zinc-950 site background.
+          {/* GRADIENT BLENDING: 
+              Instead of zooming the image to fill the whole screen (which kills quality), 
+              we let it fade into a solid color at the bottom.
           */}
-          <div className="absolute inset-0 bg-zinc-950/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/20 to-zinc-950" />
+          <div className="absolute inset-0 bg-zinc-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505]" />
         </div>
 
         {/* --- CONTENT LAYER --- */}
