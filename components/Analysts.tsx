@@ -22,48 +22,50 @@ const COHORT_DATA = [
       { name: "Senior 2", role: "Senior Analyst", image: "/headshots/nathaniel.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/kavan.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/jerry.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/keeret.jpg" },
+      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Healthcare",
     pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/linda.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/nathaniel.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/kavan.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/jerry.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/keeret.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Industrials",
-    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
+    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/headshots/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/linda.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/nathaniel.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/kavan.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/jerry.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/keeret.jpg" },
+      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Consumers",
-    pm: { name: "PM 1", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
+    pm: { name: "PM 1", role: "Portfolio Manager", image: "/headshots/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/linda.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/nathaniel.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
+   
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/kavan.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/jerry.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/keeret.jpg" },
+            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/headshots/gaurav.jpg" },
+        { name: "Anna Freeman", role: "Junior Analyst", image: "/headshots/anna.jpg" },
+         { name: "Keira Bardhi", role: "Junior Analyst", image: "/headshots/.jpg" },
+    
+     { name: "Josh Walker", role: "Junior Analyst", image: "/headshots/josh-w.jpg" },
+
     ]
   },
 ];
