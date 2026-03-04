@@ -27,8 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
-        
-        {/* FULLSCREEN background image */}
+    
         <Image
           src="/newest-background-best.jpg"
           alt=""
