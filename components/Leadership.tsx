@@ -19,33 +19,33 @@ const EXECUTIVE_TEAM = [
     title: "Co-President", 
     role: "CEO",
     image: "/headshots/stephen.jpg",
-    description: "Stephen oversees the strategic direction of the fund, bringing years of experience in institutional asset management."
+    description: ""
   },
   { 
     name: "Linda Basha", 
     title: "Co-President", 
     role: "CIO",
     image: "/headshots/linda.jpg",
-    description: "Linda leads our research and portfolio strategy, focusing on long-term fundamental value across global sectors."
+    description: ""
   },
   { 
     name: "Ainslie Loveys", 
     title: "Executive VP", 
     role: "CIO",
     image: "/headshots/ainslie-loveys.jpg",
-    description: "Ainslie focuses on operational excellence and high-level portfolio oversight within the executive team."
+    description: ""
   },
 ];
 
 const MANAGEMENT_TEAM = [
-  { name: "Nathaniel Littkemann", title: "Vice President, Investments", image: "/headshots/nathaniel.jpg", description: "Focusing on TMT and structural market shifts." },
-  { name: "Jerry Tian", title: "Vice President, Investments", image: "/headshots/jerry.jpg", description: "Specializing in financial institutions and capital markets." },
-  { name: "Keeret Grewal", title: "Vice President, Investments", image: "/headshots/keeret.jpg", description: "Lead researcher for the Metals & Mining vertical." },
-  { name: "Ben Chillian", title: "Vice President, Investments", image: "/headshots/ben.jpg", description: "Analyzing industrials and global supply chain efficiency." },
-  { name: "Person 5", title: "Vice President, Corporate", image: "/headshots/placeholder.jpg", description: "Managing institutional partnerships and corporate relations." },
-  { name: "Person 6", title: "Vice President, Events", image: "/headshots/placeholder.jpg", description: "Directing flagship conferences and networking summits." },
-  { name: "Person 7", title: "Vice President, Technology", image: "/headshots/placeholder.jpg", description: "Overseeing digital infrastructure and analytical tools." },
-  { name: "Person 8", title: "Vice President, Marketing", image: "/headshots/placeholder.jpg", description: "Leading brand strategy and association outreach." },
+  { name: "Nathaniel Littkemann", title: "Vice President, Investments", image: "/headshots/nathaniel.jpg", description: "" },
+  { name: "Jerry Tian", title: "Vice President, Investments", image: "/headshots/jerry.jpg", description: "" },
+  { name: "Keeret Grewal", title: "Vice President, Investments", image: "/headshots/keeret.jpg", description: "" },
+  { name: "Ben Chillian", title: "Vice President, Investments", image: "/headshots/ben.jpg", description: "" },
+  { name: "Person 5", title: "Vice President, Corporate", image: "/headshots/placeholder.jpg", description: "" },
+  { name: "Person 6", title: "Vice President, Events", image: "/headshots/placeholder.jpg", description: "" },
+  { name: "Person 7", title: "Vice President, Technology", image: "/headshots/placeholder.jpg", description: "" },
+  { name: "Person 8", title: "Vice President, Marketing", image: "/headshots/placeholder.jpg", description: "" },
 ];
 
 // DATA FOR PREVIOUS DIRECTOR COHORTS
