@@ -7,63 +7,46 @@ import { ChevronDown, History } from "lucide-react";
 import clsx from "clsx";
 
 /**
- * UPDATED LEADERSHIP SECTION
- * - Added: Image support for headshots.
- * - Hierarchy: Executive Tier (3-col) -> Management Tier (4-col grid).
- * - Addition: Expandable Director Archives for previous cohorts.
+ * REFINED LEADERSHIP SECTION
+ * - Hierarchy: Executive Tier (3-col) -> Management/Archive Tier (4-col).
+ * - Optimization: High-fidelity image rendering with expanded 'sizes' for 4-column layout.
  */
 
 const EXECUTIVE_TEAM = [
   { 
     name: "Stephen Stack", 
     title: "Co-President", 
-    role: "CEO",
     image: "/headshots/stephen.jpg",
-    description: ""
+    description: "Stephen oversees the strategic direction of the fund, bringing years of experience in institutional asset management."
   },
   { 
     name: "Linda Basha", 
     title: "Co-President", 
-    role: "CIO",
     image: "/headshots/linda.jpg",
-    description: ""
+    description: "Linda leads our research and portfolio strategy, focusing on long-term fundamental value across global sectors."
   },
   { 
     name: "Ainslie Loveys", 
     title: "Executive VP", 
-    role: "CIO",
     image: "/headshots/ainslie.jpg",
-    description: ""
+    description: "Ainslie focuses on operational excellence and high-level portfolio oversight within the executive team."
   },
 ];
 
 const MANAGEMENT_TEAM = [
-  { name: "Nathaniel Littkemann", title: "Vice President, Investments", image: "/headshots/nathaniel.jpg", description: "" },
-  { name: "Jerry Tian", title: "Vice President, Investments", image: "/headshots/jerry.jpg", description: "" },
-  { name: "Keeret Grewal", title: "Vice President, Investments", image: "/headshots/keeret.jpg", description: "" },
-  { name: "Ben Chillian", title: "Vice President, Investments", image: "/headshots/ben.jpg", description: "" },
-  { name: "Person 5", title: "Vice President, Corporate", image: "/headshots/placeholder.jpg", description: "" },
-  { name: "Person 6", title: "Vice President, Events", image: "/headshots/placeholder.jpg", description: "" },
-  { name: "Person 7", title: "Vice President, Technology", image: "/headshots/placeholder.jpg", description: "" },
-  { name: "Person 8", title: "Vice President, Marketing", image: "/headshots/placeholder.jpg", description: "" },
+  { name: "Keeret Grewal", title: "VP, Investments", image: "/headshots/keeret.jpg" },
+  { name: "Ben Chillian", title: "VP, Investments", image: "/headshots/ben.jpg" },
+  { name: "Person 5", title: "VP, Corporate", image: "/headshots/placeholder.jpg" },
+  { name: "Person 6", title: "VP, Events", image: "/headshots/placeholder.jpg" },
+  { name: "Cole Gittens", title: "VP, Marketing", image: "/headshots/cole.jpg" },
+  { name: "Tanya Khan", title: "VP, Marketing", image: "/headshots/tanya-cropped.jpg" },
+  { name: "Person 7", title: "VP, Technology", image: "/headshots/placeholder.jpg" },
 ];
 
-// DATA FOR PREVIOUS DIRECTOR COHORTS
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
   "25/26": [
-
-    { name: "Previous Director 2", title: "Director, Corporate", image: "" },
-    { name: "Previous Director 3", title: "Director, Events", image: "" },
-    { name: "Previous Director 4", title: "Director, Technology", image: "" },
-        { name: "Previous Director 1", title: "Director, Investments", image: "" },
-    { name: "Previous Director 2", title: "Director, Corporate", image: "" },
-    { name: "Previous Director 3", title: "Director, Events", image: "" },
-    { name: "Previous Director 4", title: "Director, Technology", image: "" },
-        { name: "Previous Director 1", title: "Director, Investments", image: "" },
-    { name: "Previous Director 2", title: "Director, Corporate", image: "" },
-    { name: "Previous Director 3", title: "Director, Events", image: "" },
-    { name: "Previous Director 4", title: "Director, Technology", image: "" },
-
+    { name: "Adam Fortura", title: "Director, Marketing", image: "/headshots/adam.jpg" },
+    { name: "Andy Sun", title: "First-Year Executive", image: "/headshots/andy.jpg" },
   ]
 };
 
@@ -90,19 +73,20 @@ export default function Leadership() {
           </h2>
         </motion.div>
 
-        {/* TIER 1: EXECUTIVES */}
+        {/* TIER 1: EXECUTIVES (3 Per Row) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-zinc-100 pt-12 mb-20">
           {EXECUTIVE_TEAM.map((member, idx) => (
             <ProfileCard 
               key={idx} 
               member={member} 
               isExecutive 
+              priority={true} 
               delay={idx * 0.1} 
             />
           ))}
         </div>
 
-        {/* TIER 2: VPs & MANAGEMENT */}
+        {/* TIER 2: VPs & MANAGEMENT (4 Per Row) */}
         <div className="space-y-8 mb-24">
           <motion.div 
             initial={{ opacity: 0 }}
@@ -121,13 +105,13 @@ export default function Leadership() {
               <ProfileCard 
                 key={idx} 
                 member={member} 
-                delay={0.2 + idx * 0.05} 
+                delay={0.1 + idx * 0.05} 
               />
             ))}
           </div>
         </div>
 
-        {/* --- DIRECTOR ARCHIVE SECTION --- */}
+        {/* --- DIRECTOR ARCHIVE SECTION (4 Per Row) --- */}
         <div className="border-t border-zinc-100 pt-16">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
             <div>
@@ -166,7 +150,7 @@ export default function Leadership() {
                     <ProfileCard 
                       key={idx} 
                       member={member} 
-                      delay={idx * 0.05} 
+                      delay={idx * 0.04} 
                       isArchive
                     />
                   ))}
@@ -187,11 +171,13 @@ function ProfileCard({
   member, 
   isExecutive = false, 
   isArchive = false,
+  priority = false,
   delay = 0 
 }: { 
   member: any; 
   isExecutive?: boolean; 
   isArchive?: boolean;
+  priority?: boolean;
   delay: number 
 }) {
   return (
@@ -202,30 +188,38 @@ function ProfileCard({
       transition={{ duration: 0.5, delay }}
       className={clsx(
         "group cursor-pointer relative",
-        isArchive && "opacity-70 hover:opacity-100 transition-opacity"
+        isArchive && "opacity-80 hover:opacity-100 transition-opacity"
       )}
     >
       {/* IMAGE CONTAINER */}
-      <div className="relative aspect-[4/5] bg-zinc-100 mb-6 overflow-hidden">
+      <div className="relative aspect-[4/5] bg-zinc-100 mb-4 overflow-hidden shadow-sm border border-zinc-100/50">
         {member.image ? (
           <Image
             src={member.image}
             alt={member.name}
             fill
+            quality={100} // Maintains original fidelity
+            priority={priority} // Optimization for top-tier images
+            /* Updated sizes for 4-column layout (approx 25vw on desktop) */
+            sizes={isExecutive ? "(max-width: 768px) 100vw, 33vw" : "(max-width: 768px) 50vw, 25vw"}
             className="object-cover transition-transform duration-700 group-hover:scale-105"
+            style={{ 
+                // Prevents aliasing during hover animations
+                imageRendering: "auto",
+                WebkitBackfaceVisibility: "hidden" 
+            }}
           />
         ) : (
           <div className="absolute inset-0 bg-zinc-200 transition-transform duration-700 group-hover:scale-105" />
         )}
         
-        {/* DARK OVERLAY FOR DESCRIPTION READABILITY */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-zinc-950/80 transition-all duration-500" />
+        <div className="absolute inset-0 bg-zinc-950/0 group-hover:bg-zinc-950/40 transition-all duration-500" />
 
-        {/* DESCRIPTION OVERLAY (Bottom part) */}
-        {!isArchive && (
-          <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10">
-            <p className="font-sans text-[11px] text-zinc-300 leading-relaxed italic border-l border-red-800 pl-4">
-              {member.description || "Active leadership member contributing to the Laurier Investment & Finance Association."}
+        {/* DESCRIPTION OVERLAY (Only for Top Tier) */}
+        {!isArchive && isExecutive && (
+          <div className="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-10 backdrop-blur-[2px]">
+            <p className="font-sans text-[11px] text-zinc-100 leading-relaxed italic border-l-2 border-red-800 pl-4">
+              {member.description || "Executive leadership at LIFA."}
             </p>
           </div>
         )}
@@ -236,12 +230,15 @@ function ProfileCard({
       {/* MEMBER INFO */}
       <div className="space-y-1">
         <h4 className={clsx(
-          "font-serif text-zinc-950 transition-colors duration-300 group-hover:text-red-800",
+          "font-serif text-zinc-950 transition-colors duration-300 group-hover:text-red-800 leading-tight",
           isExecutive ? "text-2xl" : "text-lg"
         )}>
           {member.name}
         </h4>
-        <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-800 transition-colors">
+        <p className={clsx(
+          "font-sans font-bold uppercase tracking-widest text-zinc-500 group-hover:text-zinc-800 transition-colors",
+          isExecutive ? "text-[10px]" : "text-[9px]"
+        )}>
           {member.title}
         </p>
       </div>

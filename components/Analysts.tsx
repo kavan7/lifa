@@ -18,8 +18,8 @@ const COHORT_DATA = [
     sector: "TMT + FIG",
     pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
     seniors: [
-      { name: "Jack Ross", role: "Senior Analyst", image: "/headshots/linda.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/nathaniel.jpg" },
+      { name: "Jack Ross", role: "Senior Analyst", image: "/headshots/jackr.jpg" },
+      { name: "Nicholas Graham", role: "Senior Analyst", image: "/headshots/nicholas.jpg" },
     ],
     juniors: [
       { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
@@ -47,7 +47,7 @@ const COHORT_DATA = [
       { name: "Senior 2", role: "Senior Analyst", image: "/headshots/.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Madis Hahn", role: "Junior Analyst", image: "/headshots/madis.jpg" },
       { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
       { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
@@ -72,7 +72,7 @@ const COHORT_DATA = [
 
 const WIF_DATA = [
   {
-    sector: "Strategic Initiatives",
+    sector: "",
     pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/headshots/anastasia.jpg" },
     seniors: [
       { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/headshots/giuliana.jpeg" },
