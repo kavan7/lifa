@@ -101,38 +101,43 @@ function FadeLogoWall({
   pageSize?: number;
   intervalMs?: number;
 }) {
-  const logos = useMemo(
-    () => [
-    
-      { src: "/ares.png", alt: "Ares" },
-      { src: "/point72.png", alt: "Point72" },
-      { src: "/d1.png", alt: "D1 Capital Partners" },
-      { src: "/bain.png", alt: "Bain" },
-      { src: "/barclays.png", alt: "Barclays" },
+const logos = useMemo(
+  () => [
+    { src: "/Altas.png", alt: "Altas Partners" },
+    { src: "/Blair Franklin (2).png", alt: "Blair Franklin" },
+    { src: "/BMO Logo .png", alt: "BMO" },
+    { src: "/BofA.png", alt: "Bank of America" },
+    { src: "/Brookfield.png", alt: "Brookfield" },
+    { src: "/Burgundy.webp", alt: "Burgundy Asset Management" },
+    { src: "/CC&L.png", alt: "CC&L" },
+    { src: "/Ci.png", alt: "CI Financial" },
+    { src: "/CIBC.png", alt: "CIBC" },
+    { src: "/Dawson.png", alt: "Dawson Partners" },
+    { src: "/Fengate (2).png", alt: "Fengate" },
+    { src: "/Fidelity-Logo.png", alt: "Fidelity" },
+    { src: "/gencap-logo.png", alt: "Genesis Capital" },
+    { src: "/Goldman-Sachs-Logo.png", alt: "Goldman Sachs" },
+    { src: "/Infor.png", alt: "Infor" },
+    { src: "/Jefferies_logo.svg.png", alt: "Jefferies" },
 
-      { src: "/bmo.png", alt: "BMO" },
-      { src: "/burg.png", alt: "Burgundy" },
-      { src: "/cibc.png", alt: "CIBC" },
-      { src: "/cpp.png", alt: "CPP Investments" },
-      { src: "/cs.png", alt: "Credit Suisse" },
-      { src: "/evercore.png", alt: "Evercore" },
+    { src: "/Manulife (2).png", alt: "Manulife" },
+    { src: "/McKinsey.png", alt: "McKinsey & Company" },
+    { src: "/Moelis.png", alt: "Moelis & Company" },
+    { src: "/Morgan Stanley (2).png", alt: "Morgan Stanley" },
+    { src: "/National Bank.png", alt: "National Bank" },
+    { src: "/OMERS (2).png", alt: "OMERS" },
+    { src: "/ONEX (2).png", alt: "Onex" },
+    { src: "/PCM.webp", alt: "PCM" },
+    { src: "/RBC (2).png", alt: "RBC" },
+    { src: "/Scotiabank.png", alt: "Scotiabank" },
+    { src: "/stifel.png", alt: "Stifel" },
+    { src: "/TD.png", alt: "TD Bank" },
+    { src: "/teachers.png", alt: "Ontario Teachers' Pension Plan" },
+    { src: "/Turtle Creek (2).png", alt: "Turtle Creek" },
+  ],
+  []
+);
 
-      { src: "/fidelity.png", alt: "Fidelity" },
-      { src: "/greenhill.png", alt: "Greenhill" },
-      { src: "/gs.png", alt: "Goldman Sachs" },
-      { src: "/moelis.png", alt: "Moelis" },
-      { src: "/morganstanley.png", alt: "Morgan Stanley" },
-      { src: "/omers.png", alt: "OMERS" },
-
-      { src: "/onex.png", alt: "Onex" },
-      { src: "/ottp.png", alt: "Ontario Teachers’" },
-      { src: "/rbc.png", alt: "RBC" },
-      { src: "/tcam.png", alt: "TCAM" },
-      { src: "/td.png", alt: "TD Canada Trust" },
-      { src: "/ubs.png", alt: "UBS" },
-    ],
-    []
-  );
 
   const totalPages = Math.max(1, Math.ceil(logos.length / pageSize));
   const [page, setPage] = useState(0);

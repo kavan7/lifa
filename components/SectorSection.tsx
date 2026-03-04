@@ -1,86 +1,112 @@
-import React from 'react';
-import SectorCard from './ui/SectorCard';
+"use client";
 
-// --- Sample Data (Replace images with your own) ---
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+
+/**
+ * SECTORS & EXPERTISE SECTION
+ * Updated: Wrapped cards in Link components for navigation to vertical pages.
+ */
+
 const sectorsData = [
-  {
-    id: 1,
-    title: "Technology, Media & Telecom",
-    // Use images from public folder e.g., "/images/sectors/tmt.jpg"
-    imageSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop", 
-  },
-  {
-    id: 2,
-    title: "Financial Institutions",
-    imageSrc: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1000&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    title: "Metals & Mining",
-    imageSrc: "https://images.unsplash.com/photo-1581093588402-f87c3e573362?q=80&w=1000&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    title: "Industrials",
-    imageSrc: "https://images.unsplash.com/photo-1535930749574-1399327ce78f?q=80&w=1000&auto=format&fit=crop",
-  },
-  {
-    id: 5,
-    title: "Consumers",
-    imageSrc: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=1000&auto=format&fit=crop",
-  },
-  {
-    id: 6,
-    title: "Healthcare",
-    imageSrc: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?q=80&w=1000&auto=format&fit=crop",
-  },
-  {
-    id: 7,
-    title: "Energy & Utilities",
-    imageSrc: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000&auto=format&fit=crop",
-  },
+  { id: 1, title: "Technology, Media & Telecom", slug: "tmt" },
+  { id: 2, title: "Financial Institutions", slug: "financial-institutions" },
+  { id: 3, title: "Metals & Mining", slug: "mining" },
+  { id: 4, title: "Industrials", slug: "industrials" },
+  { id: 5, title: "Consumers", slug: "consumers" },
+  { id: 6, title: "Healthcare", slug: "healthcare" },
+  { id: 7, title: "Energy & Utilities", slug: "energy" },
 ];
 
-
-const SectorsSection = () => {
-  const topRow = sectorsData.slice(0, 4);
-  const bottomRow = sectorsData.slice(4, 7);
-
+export default function SectorsSection() {
   return (
-    <section className="bg-[#08101c] py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Optional: Subtle background ambient light for the whole section */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
+    <section className="bg-black py-24 px-6 md:px-12 relative overflow-hidden" id="research">
       
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header (Optional) */}
-        <div className="mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-serif tracking-tight">Areas of Expertise</h2>
-            <p className="text-zinc-400 text-lg max-w-2xl">Deep industry knowledge and specialized experience across key global sectors.</p>
-        </div>
+      {/* --- ENHANCED BACKGROUND LAYERS --- */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] pointer-events-none z-0" 
+        style={{ 
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
+        }} 
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,%2380808012_1px,transparent_1px),linear-gradient(to_bottom,%2380808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,%23000_70%,transparent_100%)] z-0" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-red-950/20 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none z-0" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-red-900/10 rounded-full blur-[100px] translate-y-1/2 pointer-events-none z-0" />
 
-        <div className="flex flex-col gap-6">
-          {/* --- Top Row (4 items) --- */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {topRow.map((sector) => (
-              <SectorCard key={sector.id} title={sector.title} imageSrc={sector.imageSrc} />
-            ))}
-          </div>
+      {/* --- CONTENT --- */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* HEADER */}
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 text-center"
+        >
+          <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block mb-4">
+            Research Universe
+          </span>
+          <h2 className="text-4xl md:text-6xl font-serif text-white tracking-tight mb-6">
+            Sectors & Expertise
+          </h2>
+          <div className="h-[1px] w-24 bg-red-800/50 mx-auto" />
+        </motion.div>
 
-          {/* --- Bottom Row (3 items centered) --- */}
-          {/* We use flex and justify-center to mimic the original image's layout */}
-          <div className="flex flex-wrap justify-center gap-6 w-full">
-             {bottomRow.map((sector) => (
-               // On large screens, these 3 items should act like they are in a 4-col grid, so we force the width
-              <div key={sector.id} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
-                 <SectorCard title={sector.title} imageSrc={sector.imageSrc} />
-              </div>
-            ))}
-          </div>
+        {/* INTEGRATED EQUAL GRID */}
+        <div className="flex flex-wrap justify-center gap-5">
+          {sectorsData.map((sector, idx) => (
+            <Link 
+              key={sector.id} 
+              href={`/research/${sector.slug}`}
+              className="w-full sm:w-[calc(45%)] lg:w-[calc(23%)]"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="group relative h-full aspect-[4/5] bg-zinc-900/30 border border-white/5 overflow-hidden flex flex-col justify-end p-8 transition-all duration-500 hover:border-red-900/40 cursor-pointer"
+              >
+                {/* SPOTLIGHT EFFECT */}
+                <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(600px_at_50%_50%,_rgba(153,27,27,0.15),transparent)]" />
+
+                {/* IMAGE OVERLAY */}
+                <div className="absolute inset-0 z-0 opacity-20 grayscale transition-all duration-1000 group-hover:scale-105 group-hover:opacity-40">
+                  <div className="w-full h-full bg-zinc-800" />
+                </div>
+
+                {/* TEXT CONTENT */}
+                <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="h-px w-6 bg-red-800 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+                    <span className="text-red-500 font-sans font-bold text-[9px] uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      View Vertical
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-serif text-white leading-tight">
+                    {sector.title}
+                  </h3>
+                </div>
+
+                {/* NUMBERING */}
+                <div className="absolute top-6 right-8 pointer-events-none">
+                  <span className="font-serif text-6xl text-white/[0.02] group-hover:text-red-900/10 transition-colors duration-700 italic">
+                    {idx + 1}
+                  </span>
+                </div>
+
+                {/* BOTTOM ACCENT */}
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-red-800 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center z-20" />
+              </motion.div>
+            </Link>
+          ))}
         </div>
 
       </div>
     </section>
   );
-};
-
-export default SectorsSection;
+}
