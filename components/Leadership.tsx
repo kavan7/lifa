@@ -17,19 +17,19 @@ const EXECUTIVE_TEAM = [
     name: "Stephen Stack", 
     title: "Co-President", 
     image: "/headshots/stephen.jpg",
-    description: "Stephen oversees the strategic direction of the fund, bringing years of experience in institutional asset management."
+    description: ""
   },
   { 
     name: "Linda Basha", 
     title: "Co-President", 
     image: "/headshots/linda.jpg",
-    description: "Linda leads our research and portfolio strategy, focusing on long-term fundamental value across global sectors."
+    description: ""
   },
   { 
     name: "Ainslie Loveys", 
     title: "Executive VP", 
     image: "/headshots/ainslie.jpg",
-    description: "Ainslie focuses on operational excellence and high-level portfolio oversight within the executive team."
+    description: ""
   },
 ];
 
