@@ -81,7 +81,7 @@ const HeroSection = () => {
 
 /* ===================== Marquee Logo Slider ===================== */
 
-function MarqueeLogoSlider({ duration = 120 }: { duration?: number }) {
+function MarqueeLogoSlider({ duration = 220 }: { duration?: number }) {
   const [isPaused, setIsPaused] = useState(false);
 
   const logos = useMemo(
