@@ -32,7 +32,7 @@ const EXECUTIVE_TEAM = [
     name: "Ainslie Loveys", 
     title: "Executive VP", 
     role: "CIO",
-    image: "/headshots/ainslie-loveys.jpg",
+    image: "/headshots/ainslie.jpg",
     description: ""
   },
 ];
@@ -51,7 +51,7 @@ const MANAGEMENT_TEAM = [
 // DATA FOR PREVIOUS DIRECTOR COHORTS
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
   "25/26": [
-    { name: "Previous Director 1", title: "Director, Investments", image: "" },
+
     { name: "Previous Director 2", title: "Director, Corporate", image: "" },
     { name: "Previous Director 3", title: "Director, Events", image: "" },
     { name: "Previous Director 4", title: "Director, Technology", image: "" },

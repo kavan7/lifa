@@ -73,14 +73,15 @@ const COHORT_DATA = [
 const WIF_DATA = [
   {
     sector: "Strategic Initiatives",
-    pm: { name: "WIF Lead", role: "Program Director", image: "" },
+    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/headshots/anastasia.jpg" },
     seniors: [
-      { name: "WIF Analyst 1", role: "Senior Analyst", image: "" },
-      { name: "WIF Analyst 2", role: "Senior Analyst", image: "" }
+      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/headshots/giuliana.jpeg" },
+
+         { name: "Isabela Petri", role: "Senior Analyst", image: "/headshots/isabela.jpg" },
     ],
     juniors: [
-      { name: "WIF Junior 1", role: "Junior Analyst", image: "" },
-      { name: "WIF Junior 2", role: "Junior Analyst", image: "" }
+         { name: "Tanya Khan", role: "Analyst", image: "/headshots/tanya.jpg" },
+      { name: "Sarah Neske", role: "Analyst", image: "/headshots/sarah.jpg" }
     ]
   }
 ];
@@ -105,7 +106,7 @@ const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
 
 export default function ResearchCohort() {
   const [openArchive, setOpenArchive] = useState<string | null>(null);
-  const [openWif, setOpenWif] = useState(false);
+  const [openWif, setOpenWif] = useState(true);
 
   return (
     <section className="relative bg-[#0f1117] py-32 px-6 md:px-12 overflow-hidden border-t border-white/5" id="analysts">
@@ -163,13 +164,8 @@ export default function ResearchCohort() {
             </div>
             
             <div className="relative inline-block w-full md:w-64">
-              <button 
-                onClick={() => setOpenWif(!openWif)}
-                className="w-full bg-[#1a1c23] border border-white/10 px-6 py-4 flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-widest text-zinc-300 hover:border-red-800 transition-all group"
-              >
-                <span className="flex items-center gap-2"><Star size={12} className="text-red-800" /> WIF Program</span>
-                <ChevronDown size={14} className={clsx("transition-transform duration-300", openWif && "rotate-180")} />
-              </button>
+            
+             
             </div>
           </div>
 
