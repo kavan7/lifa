@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center overflow-x-hidden pt-20">
+    <section className="relative min-h-screen w-full flex items-center overflow-x-hidden pt-10">
       <div className="max-w-7xl mx-auto w-full px-6 z-10">
         <motion.div
           className="max-w-4xl py-10"
