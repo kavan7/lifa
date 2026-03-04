@@ -89,8 +89,8 @@ const WIF_DATA = [
 const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
   "Fall 2025": [
     {
-      sector: "TMT + FIG",
-      pm: { name: "Historical PM", role: "Portfolio Manager", image: "" },
+      sector: "",
+      pm: { name: "Parker Solem", role: "Senior Analyst", image: "/headshots/parker.jpg" },
       seniors: [
         { name: "Past Senior", role: "Senior Analyst", image: "" },
         { name: "Past Senior 2", role: "Senior Analyst", image: "" }
