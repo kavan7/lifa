@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronDown, History } from "lucide-react";
+import { ChevronDown, History, LucidePersonStanding, PersonStanding, User } from "lucide-react";
 import clsx from "clsx";
 
 /**
@@ -34,13 +34,13 @@ const EXECUTIVE_TEAM = [
 ];
 
 const MANAGEMENT_TEAM = [
-  { name: "Keeret Grewal", title: "VP, Investments", image: "/people/keeret.jpg" },
-  { name: "Ben Chillian", title: "VP, Investments", image: "/people/ben.jpg" },
-  { name: "Person 5", title: "VP, Corporate", image: "/people/placeholder.jpg" },
-  { name: "Person 6", title: "VP, Events", image: "/people/placeholder.jpg" },
-  { name: "Cole Gittens", title: "VP, Marketing", image: "/people/cole.jpg" },
-  { name: "Tanya Khan", title: "VP, Marketing", image: "/people/tanya-cropped.jpg" },
-  { name: "Person 7", title: "VP, Technology", image: "/people/placeholder.jpg" },
+  { name: "Keeret Grewal", title: "Vice President, Investments", image: "/people/keeret.jpg" },
+  { name: "Ben Chillian", title: "Vice President, Investments", image: "/people/ben.jpg" },
+  { name: "Person 5", title: "Vice president, Corporate", image: "/people/placeholder.jpg" },
+  { name: "Person 6", title: "Vice President, Events", image: "/people/placeholder.jpg" },
+  { name: "Cole Gittens", title: "Vice President, Marketing", image: "/people/cole.jpg" },
+  { name: "Tanya Khan", title: "Vice President, Marketing", image: "/people/tanya-cropped.jpg" },
+  { name: "Person 7", title: "Vice President, Technology", image: "/people/placeholder.jpg" },
 ];
 
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
@@ -129,7 +129,7 @@ export default function Leadership() {
                 className="w-full bg-zinc-50 border border-zinc-200 px-6 py-4 flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-widest text-zinc-600 hover:border-red-800/50 transition-all group"
               >
                 <span className="flex items-center gap-2">
-                  <History size={12} className="text-red-800" /> 25/26 Directors
+                  <User size={12} className="text-red-800" /> 25/26 Directors
                 </span>
                 <ChevronDown size={14} className={clsx("transition-transform duration-300", openArchive && "rotate-180")} />
               </button>

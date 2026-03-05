@@ -53,7 +53,7 @@ export default function NavBar() {
 
       // 2. Hide when scrolling down, show when scrolling up
       if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Scrolling down
+        setIsVisible(true); // Scrolling down
       } else {
         setIsVisible(true);  // Scrolling up
       }
@@ -61,7 +61,7 @@ export default function NavBar() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: false });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
@@ -74,7 +74,7 @@ export default function NavBar() {
         )}
       >
         {/* Glassmorphism Container */}
-        <div className="   backdrop-blur-sm border-b border-white/20">
+        <div className="   backdrop-blur-sm ">
           <div className="w-full h-24 px-6 md:px-10 flex items-center justify-between">
             
             {/* LOGO */}

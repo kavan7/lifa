@@ -193,7 +193,7 @@ export default function ResearchCohort() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
             <div>
               <span className="text-zinc-500 font-sans font-bold text-[9px] uppercase tracking-[0.4em] block mb-2">Historical Records</span>
-              <h3 className="text-3xl font-serif text-white tracking-tight italic">Institutional Archives</h3>
+              <h3 className="text-3xl font-serif text-white tracking-tight italic">Archives</h3>
             </div>
             
             <div className="relative inline-block w-full md:w-64">
