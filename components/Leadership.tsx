@@ -16,37 +16,37 @@ const EXECUTIVE_TEAM = [
   { 
     name: "Stephen Stack", 
     title: "Co-President", 
-    image: "/headshots/stephen.jpg",
+    image: "/people/stephen.jpg",
     description: ""
   },
   { 
     name: "Linda Basha", 
     title: "Co-President", 
-    image: "/headshots/linda.jpg",
+    image: "/people/linda.jpg",
     description: ""
   },
   { 
     name: "Ainslie Loveys", 
     title: "Executive VP", 
-    image: "/headshots/ainslie.jpg",
+    image: "/people/ainslie.jpg",
     description: ""
   },
 ];
 
 const MANAGEMENT_TEAM = [
-  { name: "Keeret Grewal", title: "VP, Investments", image: "/headshots/keeret.jpg" },
-  { name: "Ben Chillian", title: "VP, Investments", image: "/headshots/ben.jpg" },
-  { name: "Person 5", title: "VP, Corporate", image: "/headshots/placeholder.jpg" },
-  { name: "Person 6", title: "VP, Events", image: "/headshots/placeholder.jpg" },
-  { name: "Cole Gittens", title: "VP, Marketing", image: "/headshots/cole.jpg" },
-  { name: "Tanya Khan", title: "VP, Marketing", image: "/headshots/tanya-cropped.jpg" },
-  { name: "Person 7", title: "VP, Technology", image: "/headshots/placeholder.jpg" },
+  { name: "Keeret Grewal", title: "VP, Investments", image: "/people/keeret.jpg" },
+  { name: "Ben Chillian", title: "VP, Investments", image: "/people/ben.jpg" },
+  { name: "Person 5", title: "VP, Corporate", image: "/people/placeholder.jpg" },
+  { name: "Person 6", title: "VP, Events", image: "/people/placeholder.jpg" },
+  { name: "Cole Gittens", title: "VP, Marketing", image: "/people/cole.jpg" },
+  { name: "Tanya Khan", title: "VP, Marketing", image: "/people/tanya-cropped.jpg" },
+  { name: "Person 7", title: "VP, Technology", image: "/people/placeholder.jpg" },
 ];
 
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
   "25/26": [
-    { name: "Adam Fortura", title: "Director, Marketing", image: "/headshots/adam.jpg" },
-    { name: "Andy Sun", title: "First-Year Executive", image: "/headshots/andy.jpg" },
+    { name: "Adam Fortura", title: "Director, Marketing", image: "/people/adam.jpg" },
+    { name: "Andy Sun", title: "First-Year Executive", image: "/people/andy.jpg" },
   ]
 };
 
