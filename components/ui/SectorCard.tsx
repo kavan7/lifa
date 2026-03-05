@@ -25,7 +25,7 @@ const SectorCard: React.FC<SectorCardProps> = ({ title, imageSrc, className = ''
     <motion.div
       ref={divRef}
       onMouseMove={handleMouseMove}
-      className={`relative h-[320px] sm:h-[400px] w-full rounded-md overflow-hidden group cursor-pointer bg-zinc-950 border border-white/10 shadow-2xl ${className}`}
+      className={`relative h-[320px] sm:h-[400px] w-full rounded-md overflow-hidden group cursor-pointerborder border-white/10 shadow-2xl ${className}`}
       initial="initial"
       whileHover="hover"
       animate="initial"
@@ -33,8 +33,8 @@ const SectorCard: React.FC<SectorCardProps> = ({ title, imageSrc, className = ''
       {/* --- 1. Background Image --- */}
       <motion.div
         variants={{
-          initial: { scale: 1, filter: 'grayscale(100%) brightness(0.3)' },
-          hover: { scale: 1.05, filter: 'grayscale(90%) brightness(0.5)' },
+          initial: { scale: 1, filter: 'grayscale(10%) brightness(0.7)' },
+          hover: { scale: 1.05, filter: 'grayscale(20%) brightness(0.5)' },
         }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0 w-full h-full"
