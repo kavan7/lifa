@@ -103,13 +103,13 @@ export default function SectorsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="group relative h-full aspect-[4/5] bg-zinc-900/30 border border-white/5 overflow-hidden flex flex-col justify-end p-8 transition-all duration-500 hover:border-red-900/40 cursor-pointer"
+                className="group relative h-full aspect-[4/5] border border-white/5 overflow-hidden flex flex-col justify-end p-8 transition-all duration-500 hover:border-red-900/40 cursor-pointer"
               >
                 {/* SPOTLIGHT EFFECT */}
                 <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(600px_at_50%_50%,_rgba(153,27,27,0.15),transparent)]" />
 
                 {/* IMAGE OVERLAY - HIGH QUALITY IMPLEMENTATION */}
-                <div className="absolute inset-0 z-0 opacity-20 grayscale transition-all duration-1000 group-hover:scale-105 group-hover:opacity-50 group-hover:grayscale-0">
+                <div className="absolute inset-0 z-0 opacity-60 grayscale-70 transition-all duration-1000 group-hover:scale-105 group-hover:opacity-50 group-hover:grayscale-0">
                   <Image 
                     src={sector.image}
                     alt={sector.title}
