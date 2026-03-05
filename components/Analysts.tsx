@@ -16,55 +16,56 @@ import clsx from "clsx";
 const COHORT_DATA = [
   {
     sector: "TMT + FIG",
-    pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/people/stephen.jpg" },
+    pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
     seniors: [
-      { name: "Jack Ross", role: "Senior Analyst", image: "/people/jackr.jpg" },
-      { name: "Nicholas Graham", role: "Senior Analyst", image: "/people/nicholas.jpg" },
+      { name: "Jack Ross", role: "Senior Analyst", image: "/headshots/jackr.jpg" },
+      { name: "Nicholas Graham", role: "Senior Analyst", image: "/headshots/nicholas.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Healthcare",
-    pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/people/stephen.jpg" },
+    pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/people/.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/people/.jpg" },
+      { name: "Anastasia Paraskevopoulos", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Kyle Shaw", role: "Senior Analyst", image: "/headshots/.jpg" },
     ],
     juniors: [
-      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Kavan Abeyratne", role: "Junior Analyst", image: "/headshots/.jpg" },
+        { name: "Victor Duong", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Zakariye Abdie", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Industrials",
-    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/people/.jpg" },
+    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/headshots/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/people/.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/people/.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/.jpg" },
     ],
     juniors: [
-      { name: "Madis Hahn", role: "Junior Analyst", image: "/people/madis.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Madis Hahn", role: "Junior Analyst", image: "/headshots/madis.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
     ]
   },
   {
     sector: "Consumers",
-    pm: { name: "PM 1", role: "Portfolio Manager", image: "/people/.jpg" },
+    pm: { name: "PM 1", role: "Portfolio Manager", image: "/headshots/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/people/.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
    
     ],
     juniors: [
-            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/people/gaurav.jpg" },
-        { name: "Anna Freeman", role: "Junior Analyst", image: "/people/anna.jpg" },
-         { name: "Keira Bardhi", role: "Junior Analyst", image: "/people/.jpg" },
+            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/headshots/gaurav.jpg" },
+        { name: "Anna Freeman", role: "Junior Analyst", image: "/headshots/anna.jpg" },
+         { name: "Keira Bardhi", role: "Junior Analyst", image: "/headshots/.jpg" },
     
-     { name: "Josh Walker", role: "Junior Analyst", image: "/people/josh-w.jpg" },
+     { name: "Josh Walker", role: "Junior Analyst", image: "/headshots/josh-w.jpg" },
 
     ]
   },
@@ -73,15 +74,15 @@ const COHORT_DATA = [
 const WIF_DATA = [
   {
     sector: "",
-    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/people/anastasia.jpg" },
+    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/headshots/anastasia.jpg" },
     seniors: [
-      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/people/giuliana.jpeg" },
+      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/headshots/giuliana.jpeg" },
 
-         { name: "Isabela Petri", role: "Senior Analyst", image: "/people/Isabela.jpg" },
+         { name: "Isabela Petri", role: "Senior Analyst", image: "/headshots/isabela.jpg" },
     ],
     juniors: [
-         { name: "Tanya Khan", role: "Analyst", image: "/people/tanya.jpg" },
-      { name: "Sarah Neske", role: "Analyst", image: "/people/sarah.jpg" }
+         { name: "Tanya Khan", role: "Analyst", image: "/headshots/tanya.jpg" },
+      { name: "Sarah Neske", role: "Analyst", image: "/headshots/sarah.jpg" }
     ]
   }
 ];
@@ -89,8 +90,21 @@ const WIF_DATA = [
 const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
   "Fall 2025": [
     {
-      sector: "",
-      pm: { name: "Parker Solem", role: "Senior Analyst", image: "/people/parker.jpg" },
+      sector: "Previous Analysts",
+      pm: { name: "Historical PM", role: "Portfolio Manager", image: "" },
+      seniors: [
+        { name: "Past Senior", role: "Senior Analyst", image: "" },
+        { name: "Past Senior 2", role: "Senior Analyst", image: "" }
+      ],
+      juniors: [
+        { name: "Past Junior 1", role: "Junior Analyst", image: "" },
+        { name: "Past Junior 2", role: "Junior Analyst", image: "" },
+        { name: "Past Junior 3", role: "Junior Analyst", image: "" }
+      ]
+    },
+        {
+      sector: "Previous Analysts",
+      pm: { name: "Historical PM", role: "Portfolio Manager", image: "" },
       seniors: [
         { name: "Past Senior", role: "Senior Analyst", image: "" },
         { name: "Past Senior 2", role: "Senior Analyst", image: "" }
@@ -140,7 +154,7 @@ export default function ResearchCohort() {
           >
             <div className="flex items-center gap-4">
               <div className="h-px w-10 bg-red-800" />
-              <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block">Analyst Program</span>
+              <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block">Institutional Coverage</span>
             </div>
             <h2 className="text-4xl md:text-7xl font-serif text-white tracking-tighter leading-[0.9] flex flex-wrap gap-x-6">
               The Winter Cohort <span className="text-zinc-600 font-light italic">/</span> <span className="text-zinc-400">2026</span>
@@ -161,11 +175,6 @@ export default function ResearchCohort() {
             <div>
               <span className="text-red-800 font-sans font-bold text-[9px] uppercase tracking-[0.4em] block mb-2">Internal Initiatives</span>
               <h3 className="text-3xl font-serif text-white tracking-tight italic">Women in Finance</h3>
-            </div>
-            
-            <div className="relative inline-block w-full md:w-64">
-            
-             
             </div>
           </div>
 
@@ -193,7 +202,7 @@ export default function ResearchCohort() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
             <div>
               <span className="text-zinc-500 font-sans font-bold text-[9px] uppercase tracking-[0.4em] block mb-2">Historical Records</span>
-              <h3 className="text-3xl font-serif text-white tracking-tight italic">Archives</h3>
+              <h3 className="text-3xl font-serif text-white tracking-tight italic">Previous Analyst Cohorts</h3>
             </div>
             
             <div className="relative inline-block w-full md:w-64">
@@ -208,7 +217,7 @@ export default function ResearchCohort() {
           </div>
 
           <AnimatePresence mode="wait">
-            {openArchive && (
+            {openArchive && ( openArchive in ARCHIVE_DATA ) && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
@@ -234,6 +243,11 @@ export default function ResearchCohort() {
 /* ===================== SECTOR POD SUB-COMPONENT ===================== */
 
 function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }) {
+  // For archives, we merge all members into a single array for equality
+  const allMembers = isArchive 
+    ? [pod.pm, ...pod.seniors, ...pod.juniors] 
+    : [];
+
   return (
     <div className={clsx("relative", isArchive && "opacity-60 hover:opacity-100 transition-opacity duration-500")}>
       <div className="flex items-center gap-6 mb-10">
@@ -244,26 +258,36 @@ function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }
         <div className="h-[1px] flex-1 bg-gradient-to-r from-white/5 via-white/5 to-transparent" />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        <div className="lg:col-span-3">
-          <div className="mb-8 flex items-center gap-3">
-            <Target size={14} className="text-red-800" />
-            <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Pod Leader</p>
-          </div>
-          <MemberCard member={pod.pm} featured />
+      {isArchive ? (
+        /* ARCHIVE VIEW: Flat Equality Grid */
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          {allMembers.map((member, mIdx) => (
+            <MemberCard key={mIdx} member={member} />
+          ))}
         </div>
+      ) : (
+        /* ACTIVE VIEW: Hierarchical Grid */
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-3">
+            <div className="mb-8 flex items-center gap-3">
+              <Target size={14} className="text-red-800" />
+              <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Pod Leader</p>
+            </div>
+            <MemberCard member={pod.pm} featured />
+          </div>
 
-        <div className="lg:col-span-9">
-          <div className="mb-8 flex items-center gap-3">
-            <BarChart3 size={14} className="text-zinc-600" />
-            <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Analysts</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {pod.seniors.map((senior: any, sIdx: number) => <MemberCard key={sIdx} member={senior} />)}
-            {pod.juniors.map((junior: any, jIdx: number) => <MemberCard key={jIdx} member={junior} isJunior />)}
+          <div className="lg:col-span-9">
+            <div className="mb-8 flex items-center gap-3">
+              <BarChart3 size={14} className="text-zinc-600" />
+              <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Analysts</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {pod.seniors.map((senior: any, sIdx: number) => <MemberCard key={sIdx} member={senior} />)}
+              {pod.juniors.map((junior: any, jIdx: number) => <MemberCard key={jIdx} member={junior} isJunior />)}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
