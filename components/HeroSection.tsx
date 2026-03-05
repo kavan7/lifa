@@ -72,7 +72,7 @@ const HeroSection = () => {
           {/* PRO TIP: Increase this number to SLOW DOWN the scroll. 
               100-150 is usually the "sweet spot" for prestige.
           */}
-          <MarqueeLogoSlider duration={120} />
+          <MarqueeLogoSlider duration={200} />
         </motion.div>
       </div>
     </section>
@@ -124,7 +124,7 @@ function MarqueeLogoSlider({ duration = 220 }: { duration?: number }) {
   return (
     <div 
       className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden group"
-      onMouseEnter={() => setIsPaused(true)}
+      onMouseEnter={() => setIsPaused(false)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Soft edge masking using CSS masks (better than gradient divs) */}
@@ -154,7 +154,7 @@ function MarqueeLogoSlider({ duration = 220 }: { duration?: number }) {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="w-full h-full object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="w-[80%] h-[80%] object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300"
                 loading="lazy"
               />
             </div>

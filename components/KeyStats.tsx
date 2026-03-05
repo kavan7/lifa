@@ -14,7 +14,7 @@ import clsx from "clsx";
 
 export default function HistoryAndStatsPage() {
   return (
-    <main className="w-full bg-[#fdfdfd] text-zinc-900 overflow-x-hidden">
+    <main className="w-full bg-zinc-100  text-zinc-900 overflow-x-hidden">
       <HistoryAndStats />
     </main>
   );
@@ -43,7 +43,7 @@ function HistoryAndStats() {
   };
 
   return (
-    <section className="w-full py-24 md:py-32 border-t border-zinc-100"  id="who-we-are">
+    <section className="w-full py-24 md:py-32 border-t opacity-100 border-zinc-100"  id="who-we-are">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* ===== PART 1: THE NARRATIVE (Asymmetrical Grid) ===== */}
@@ -73,8 +73,8 @@ function HistoryAndStats() {
           <div className="lg:col-span-7 lg:col-start-6">
           
             <motion.div className="space-y-8">
-              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-zinc-800">
-                The club was first established in YYYY by a group of analysts 
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-zinc-800"> 
+                The club was first established in YYYY by a group of students
                 driven by the conviction that deep fundamental research is the 
                 only sustainable path to alpha.
               </p>

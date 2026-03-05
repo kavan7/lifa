@@ -54,7 +54,7 @@ export default function Leadership() {
   const [openArchive, setOpenArchive] = useState<string | null>(null);
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white" id="leadership">
+    <section className="w-full py-16 md:py-24 bg-zinc-100 " id="leadership">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* SECTION HEADER */}

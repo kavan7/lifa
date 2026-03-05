@@ -140,7 +140,7 @@ export default function ResearchCohort() {
           >
             <div className="flex items-center gap-4">
               <div className="h-px w-10 bg-red-800" />
-              <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block">Institutional Coverage</span>
+              <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block">Analyst Program</span>
             </div>
             <h2 className="text-4xl md:text-7xl font-serif text-white tracking-tighter leading-[0.9] flex flex-wrap gap-x-6">
               The Winter Cohort <span className="text-zinc-600 font-light italic">/</span> <span className="text-zinc-400">2026</span>

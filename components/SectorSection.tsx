@@ -71,7 +71,7 @@ export default function SectorsSection() {
             viewport={{ once: true }}
             className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block mb-4"
           >
-            Research Universe
+            Research
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 15 }}
@@ -105,7 +105,7 @@ export default function SectorsSection() {
                 className="group relative w-full aspect-[4/5] border border-white/10 overflow-hidden flex flex-col justify-end p-8 transition-colors duration-500 hover:border-red-900/60 bg-neutral-900/20 will-change-transform"
               >
                 {/* IMAGE OVERLAY */}
-                <div className="absolute inset-0 z-0 opacity-40 grayscale transition-all duration-1000 group-hover:scale-110 group-hover:opacity-60 group-hover:grayscale-0">
+                <div className="absolute inset-0 z-0 opacity-80 grayscale-50 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-60 group-hover:grayscale-0">
                   <Image 
                     src={sector.image}
                     alt={sector.title}
