@@ -89,7 +89,7 @@ export default function NavBar() {
             </Link>
 
             {/* DESKTOP NAVIGATION */}
-            <nav className="hidden md:flex gap-10 ml-auto items-center">
+            <nav className="hidden md:flex gap-10 ml-auto font-serif items-center">
               {NAV.map((item) => {
                 const hasChildren = !!item.children;
                 const isActive = pathname === item.href || item.children?.some(c => pathname === c.href);
