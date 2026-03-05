@@ -77,7 +77,7 @@ const WIF_DATA = [
     seniors: [
       { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/people/giuliana.jpeg" },
 
-         { name: "Isabela Petri", role: "Senior Analyst", image: "/people/isabela.jpg" },
+         { name: "Isabela Petri", role: "Senior Analyst", image: "/people/Isabela.jpg" },
     ],
     juniors: [
          { name: "Tanya Khan", role: "Analyst", image: "/people/tanya.jpg" },

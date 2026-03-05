@@ -74,7 +74,7 @@ export default function NavBar() {
         )}
       >
         {/* Glassmorphism Container */}
-        <div className="bg-zinc-950/40 backdrop-blur-sm border-b border-white/20">
+        <div className="   backdrop-blur-sm border-b border-white/20">
           <div className="w-full h-24 px-6 md:px-10 flex items-center justify-between">
             
             {/* LOGO */}
@@ -116,7 +116,7 @@ export default function NavBar() {
 
                         {/* DROPDOWN MENU */}
                         <div className="absolute top-full right-0 pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out w-72">
-                          <div className="bg-zinc-900/80 backdrop-blur-2xl border border-white/20 rounded-xl shadow-2xl overflow-hidden p-1.5">
+                          <div className="  borderrounded-xl  overflow-hidden p-1.5">
                             {item.children?.map((child) => (
                               <Link
                                 key={child.href}
@@ -125,7 +125,7 @@ export default function NavBar() {
                                   "block px-4 py-2.5 text-[15px] font-medium rounded-lg transition-all",
                                   pathname === child.href 
                                     ? "text-white bg-white/10" 
-                                    : "text-zinc-400 hover:text-white hover:bg-white/5"
+                                    : "text-zinc-400 hover:text-red-500 hover:bg-white/5"
                                 )}
                               >
                                 {child.name}

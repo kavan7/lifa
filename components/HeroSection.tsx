@@ -131,8 +131,8 @@ function MarqueeLogoSlider({ duration = 220 }: { duration?: number }) {
       <div 
         className="flex w-fit items-center gap-2 md:gap-20"
         style={{
-          maskImage: 'linear-gradient(to right, transparent, black 5%, black 5%, transparent)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 5%, transparent)'
+          maskImage: 'linear-gradient(to right, transparent, black 0%, black 0%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 0%, black 0%, transparent)'
         }}
       >
         <motion.div
