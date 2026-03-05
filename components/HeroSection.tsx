@@ -40,7 +40,7 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.p
-            className=" text-white font-medium text-sm sm:text-base md:text-lg font-sans leading-relaxed drop-shadow max-w-2xl opacity-90"
+            className=" text-white font-medium text-sm sm:text-base md:text-lg font-sans leading-relaxed mt-5 drop-shadow max-w-2xl opacity-90"
             initial={{ opacity: 0, y: 10 }}
             animate={{
               opacity: 1,
