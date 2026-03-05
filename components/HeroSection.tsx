@@ -20,7 +20,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen w-full flex items-center overflow-x-hidden ">
       <div className="max-w-7xl mx-auto w-full px-6 z-10">
         <motion.div
-          className="max-w-4xl py-10"
+          className="max-w-4xl "
           variants={textWrap}
           initial="hidden"
           animate="show"
