@@ -61,10 +61,10 @@ function HistoryAndStats() {
                 Institutional Legacy
               </span>
               <h2 className="font-serif text-5xl md:text-6xl leading-[1.1] text-zinc-950">
-                Our <br className="hidden lg:block" /> History
+                Our <br className="hidden lg:block" /> Story
               </h2>
               <p className="mt-6 font-sans text-zinc-500 text-sm max-w-[200px]">
-                Tracing our evolution from a research collective to a market leader.
+                Something about how long weve been at this and how far its come.
               </p>
             </motion.div>
           </div>
@@ -74,9 +74,8 @@ function HistoryAndStats() {
           
             <motion.div className="space-y-8">
               <p className="font-serif text-2xl md:text-3xl leading-relaxed text-zinc-800"> 
-                The club was first established in YYYY by a group of students
-                driven by the conviction that deep fundamental research is the 
-                only sustainable path to alpha.
+              Today, we are the first ever Canadian investment club to do private capital projects soemthign something something so sick talk more about it etc etc etc
+            
               </p>
               
               {/* Decorative Red Accent Line */}
@@ -84,16 +83,10 @@ function HistoryAndStats() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 font-sans text-zinc-600 leading-relaxed text-md">
                 <p>
-                  Our journey began with a focus on sector-specific expertise. 
-                  By integrating macroeconomic frameworks with granular company 
-                  analysis, we developed a proprietary methodology that 
-                  identifies opportunities others overlook.
+                Merger of two legacy clubs etc etc et c
                 </p>
                 <p>
-                  Today, we operate with the same intellectual rigor that 
-                  defined our founding. Our commitment to transparency, 
-                  long-term thinking, and fundamental excellence continues to 
-                  guide our evolution in a complex global landscape.
+                  Today, we are the first ever Canadian investment club to do private capital projects soemthign something something so sick talk more about it etc etc etc
                 </p>
               </div>
             </motion.div>
@@ -120,7 +113,7 @@ function HistoryAndStats() {
           {/* Ledger-style grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 lg:gap-y-0">
             <StatItem 
-              value="$70,000" 
+              value="$100T" 
               label="Assets Under Management" 
               detail="Deployed across core sectors" 
             />
@@ -131,9 +124,9 @@ function HistoryAndStats() {
               hasBorder 
             />
             <StatItem 
-              value="08" 
+              value="10" 
               label="Years Established" 
-              detail="Continuous market presence" 
+              detail="Largest Laurier student investment club" 
               hasBorder 
             />
             <StatItem 
