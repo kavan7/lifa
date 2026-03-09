@@ -16,56 +16,56 @@ import clsx from "clsx";
 const COHORT_DATA = [
   {
     sector: "TMT + FIG",
-    pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
+    pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/people/stephen.jpg" },
     seniors: [
-      { name: "Jack Ross", role: "Senior Analyst", image: "/headshots/jackr.jpg" },
-      { name: "Nicholas Graham", role: "Senior Analyst", image: "/headshots/nicholas.jpg" },
+      { name: "Jack Ross", role: "Senior Analyst", image: "/people/jackr.jpg" },
+      { name: "Nicholas Graham", role: "Senior Analyst", image: "/people/nicholas.jpg" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/headshots/.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Junior 1", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
     ]
   },
   {
     sector: "Healthcare",
-    pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/headshots/stephen.jpg" },
+    pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/people/stephen.jpg" },
     seniors: [
-      { name: "Anastasia Paraskevopoulos", role: "Senior Analyst", image: "/headshots/.jpg" },
-      { name: "Kyle Shaw", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Anastasia Paraskevopoulos", role: "Senior Analyst", image: "/people/.jpg" },
+      { name: "Kyle Shaw", role: "Senior Analyst", image: "/people/.jpg" },
     ],
     juniors: [
-      { name: "Kavan Abeyratne", role: "Junior Analyst", image: "/headshots/.jpg" },
-        { name: "Victor Duong", role: "Junior Analyst", image: "/headshots/.jpg" },
-      { name: "Zakariye Abdie", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Kavan Abeyratne", role: "Junior Analyst", image: "/people/.jpg" },
+        { name: "Victor Duong", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Zakariye Abdie", role: "Junior Analyst", image: "/people/zakariye.jpg" },
     ]
   },
   {
     sector: "Industrials",
-    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/headshots/.jpg" },
+    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/people/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Erin Howard", role: "Senior Analyst", image: "/people/erin.jpg" },
+      { name: "Senior 2", role: "Senior Analyst", image: "/people/.jpg" },
     ],
     juniors: [
-      { name: "Madis Hahn", role: "Junior Analyst", image: "/headshots/madis.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/headshots/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/headshots/.jpg" },
+      { name: "Madis Hahn", role: "Junior Analyst", image: "/people/madis.jpg" },
+      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
     ]
   },
   {
     sector: "Consumers",
-    pm: { name: "PM 1", role: "Portfolio Manager", image: "/headshots/.jpg" },
+    pm: { name: "PM 1", role: "Portfolio Manager", image: "/people/.jpg" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/headshots/.jpg" },
+      { name: "Senior 1", role: "Senior Analyst", image: "/people/.jpg" },
    
     ],
     juniors: [
-            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/headshots/gaurav.jpg" },
-        { name: "Anna Freeman", role: "Junior Analyst", image: "/headshots/anna.jpg" },
-         { name: "Keira Bardhi", role: "Junior Analyst", image: "/headshots/.jpg" },
+            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/people/gaurav.jpg" },
+        { name: "Anna Freeman", role: "Junior Analyst", image: "/people/anna.jpg" },
+         { name: "Keira Bardhi", role: "Junior Analyst", image: "/people/.jpg" },
     
-     { name: "Josh Walker", role: "Junior Analyst", image: "/headshots/josh-w.jpg" },
+     { name: "Josh Walker", role: "Junior Analyst", image: "/people/josh-w.jpg" },
 
     ]
   },
@@ -74,15 +74,16 @@ const COHORT_DATA = [
 const WIF_DATA = [
   {
     sector: "",
-    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/headshots/anastasia.jpg" },
+    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/people/anastasia.jpg" },
     seniors: [
-      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/headshots/giuliana.jpeg" },
+      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/people/giuliana.jpeg" },
 
-         { name: "Isabela Petri", role: "Senior Analyst", image: "/headshots/isabela.jpg" },
+         { name: "Isabela Petri", role: "Senior Analyst", image: "/people/isabela.jpg" },
     ],
     juniors: [
-         { name: "Tanya Khan", role: "Analyst", image: "/headshots/tanya.jpg" },
-      { name: "Sarah Neske", role: "Analyst", image: "/headshots/sarah.jpg" }
+         { name: "Tanya Khan", role: "Analyst", image: "/people/tanya.jpg" },
+         { name: "Lauryne Assa", role: "Analyst", image: "/people/lauryne.jpg" },
+      { name: "Sarah Neske", role: "Analyst", image: "/people/sarah.jpg" }
     ]
   }
 ];
@@ -91,9 +92,9 @@ const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
   "Fall 2025": [
     {
       sector: "Previous Analysts",
-      pm: { name: "Historical PM", role: "Portfolio Manager", image: "" },
+      pm: { name: "Ben Allday", role: "Senior Analyst", image: "/people/ben-allday.jpg" },
       seniors: [
-        { name: "Past Senior", role: "Senior Analyst", image: "" },
+        { name: "Parker Solem", role: "Senior Analyst", image: "/people/parker.jpg" },
         { name: "Past Senior 2", role: "Senior Analyst", image: "" }
       ],
       juniors: [

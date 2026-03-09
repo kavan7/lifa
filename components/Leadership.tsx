@@ -46,7 +46,10 @@ const MANAGEMENT_TEAM = [
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
   "25/26": [
     { name: "Adam Fortura", title: "Director, Marketing", image: "/people/adam.jpg" },
+    { name: "Cole Vagueiro", title: "Director, Events", image: "/people/cole-v.jpg" },
     { name: "Andy Sun", title: "First-Year Executive", image: "/people/andy.jpg" },
+    { name: "Lucas Campagnoni", title: "First-Year Executive", image: "/people/lucas-cropped.jpg" },
+    
   ]
 };
 
