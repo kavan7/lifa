@@ -15,10 +15,10 @@ import clsx from "clsx";
 
 const COHORT_DATA = [
   {
-    sector: "TMT + FIG",
-    pm: { name: "Alex Gan", role: "Portfolio Manager", image: "/people/stephen.jpg" },
+    sector: "FIG",
+    pm: { name: "Ben Allday", role: "Portfolio Manager", image: "/people/ben-allday.jpg" },
     seniors: [
-      { name: "Jack Ross", role: "Senior Analyst", image: "/people/jackr.jpg" },
+      { name: "", role: "Senior Analyst", image: "/people/jackr.jpg" },
       { name: "Nicholas Graham", role: "Senior Analyst", image: "/people/nicholas.jpg" },
     ],
     juniors: [
@@ -28,8 +28,8 @@ const COHORT_DATA = [
     ]
   },
   {
-    sector: "Healthcare",
-    pm: { name: "Derek Gonzalez", role: "Portfolio Manager", image: "/people/stephen.jpg" },
+    sector: "Consumer",
+    pm: { name: "PM 2", role: "Portfolio Manager", image: "/people/PM.jpg" },
     seniors: [
       { name: "Anastasia Paraskevopoulos", role: "Senior Analyst", image: "/people/.jpg" },
       { name: "Kyle Shaw", role: "Senior Analyst", image: "/people/.jpg" },
