@@ -20,7 +20,7 @@ const NAV = [
     name: "Research",
     href: "#",
     children: [
-          { name: "Analysts", href: "#analysts" }, 
+      { name: "Analysts", href: "#analysts" }, 
       { name: "Technology, Media & Telecom", href: "/research/tmt" },
       { name: "Financial Institutions", href: "/research/financial-institutions" },
       { name: "Metals & Mining", href: "/research/mining" },
@@ -39,14 +39,16 @@ export default function NavBar() {
   // SCROLL LOGIC
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // 1. Re-show if near the top
+      // 1. Re-show and make transparent if near the top
       if (currentScrollY < 10) {
         setIsVisible(true);
+        setIsScrolled(false);
         setLastScrollY(currentScrollY);
         return;
       }
@@ -58,6 +60,7 @@ export default function NavBar() {
         setIsVisible(true);  // Scrolling up
       }
 
+      setIsScrolled(true); // We are past the top threshold
       setLastScrollY(currentScrollY);
     };
 
@@ -73,8 +76,15 @@ export default function NavBar() {
           isVisible ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        {/* Glassmorphism Container */}
-        <div className="   backdrop-blur-sm ">
+        {/* Container with dynamic ultra-dark background */}
+        <div 
+          className={clsx(
+            "transition-all duration-500", 
+            isScrolled 
+              ? "bg-black/100 backdrop-blur-md border-b border-white/5 shadow-2xl" 
+              : "bg-transparent border-b border-transparent"
+          )}
+        >
           <div className="w-full h-24 px-6 md:px-10 flex items-center justify-between">
             
             {/* LOGO */}
@@ -116,7 +126,7 @@ export default function NavBar() {
 
                         {/* DROPDOWN MENU */}
                         <div className="absolute top-full right-0 pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out w-72">
-                          <div className="  borderrounded-xl  overflow-hidden p-1.5">
+                          <div className="border border-white/10 rounded-xl overflow-hidden p-1.5 bg-black/95 backdrop-blur-md shadow-xl">
                             {item.children?.map((child) => (
                               <Link
                                 key={child.href}
@@ -166,7 +176,7 @@ export default function NavBar() {
         {/* MOBILE NAV DRAWER */}
         {mobileOpen && (
           <div className="md:hidden fixed inset-x-0 top-[96px] p-4 z-50">
-            <div className="bg-zinc-950 border border-white/10 rounded-2xl p-4 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto">
+            <div className="bg-black/95 backdrop-blur-md border border-white/10 rounded-2xl p-4 shadow-2xl max-h-[calc(100vh-120px)] overflow-y-auto">
               {NAV.map((item) => (
                 <div key={item.name} className="py-3 border-b border-white/5 last:border-0">
                   <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-[0.2em] px-3 mb-2">
@@ -204,7 +214,7 @@ export default function NavBar() {
               ))}
             </div>
             <div 
-              className="fixed inset-0 bg-black/40 -z-10 backdrop-blur-sm" 
+              className="fixed inset-0 bg-black/60 -z-10 backdrop-blur-sm" 
               onClick={() => setMobileOpen(false)}
             />
           </div>
