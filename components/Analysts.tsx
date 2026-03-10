@@ -18,7 +18,7 @@ const COHORT_DATA = [
     sector: "FIG",
     pm: { name: "Ben Allday", role: "Portfolio Manager", image: "/people/ben-allday.jpg" },
     seniors: [
-      { name: "", role: "Senior Analyst", image: "/people/jackr.jpg" },
+      { name: "Someone", role: "Senior Analyst", image: "/people/jackr.jpg" },
       { name: "Nicholas Graham", role: "Senior Analyst", image: "/people/nicholas.jpg" },
     ],
     juniors: [
