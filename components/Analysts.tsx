@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Shield, Target, BarChart3, Globe, ChevronDown, History, Star } from "lucide-react";
+import { User, Target, BarChart3, Globe, ChevronDown, History } from "lucide-react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -16,74 +16,102 @@ import clsx from "clsx";
 const COHORT_DATA = [
   {
     sector: "FIG",
-    pm: { name: "Ben Allday", role: "Portfolio Manager", image: "/people/ben-allday.jpg" },
+    pm: { name: "Ben Allday", role: "Portfolio Manager", image: "/people/ben-allday.jpg", description: "Ben is a third-year BBA student at Wilfrid Laurier University, who has been involved in LIFA, ACIIC, and LCT. This is his fourth term in the LIFA analyst program, and he is looking forward to contributing as a FIG portfolio manager for the fund's inception. Ben has completed multiple buy-side internships, including analyst positions at Peloton Capital Management and Empire Life Investments. Next summer, he will be joining Ares Management as a Private Equity Summer Analyst. Outside of his studies and work, Ben enjoys hanging out with his friends, reading (fiction and non-fiction), and going on walks." },
     seniors: [
-      { name: "Someone", role: "Senior Analyst", image: "/people/jackr.jpg" },
-      { name: "Nicholas Graham", role: "Senior Analyst", image: "/people/nicholas.jpg" },
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+      { name: "Senior Analyst 2", role: "Senior Analyst", image: "", description: "" },
     ],
     juniors: [
-      { name: "Junior 1", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
-    ]
-  },
-  {
-    sector: "Consumer",
-    pm: { name: "PM 2", role: "Portfolio Manager", image: "/people/PM.jpg" },
-    seniors: [
-      { name: "Anastasia Paraskevopoulos", role: "Senior Analyst", image: "/people/.jpg" },
-      { name: "Kyle Shaw", role: "Senior Analyst", image: "/people/.jpg" },
-    ],
-    juniors: [
-      { name: "Kavan Abeyratne", role: "Junior Analyst", image: "/people/.jpg" },
-        { name: "Victor Duong", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Zakariye Abdie", role: "Junior Analyst", image: "/people/zakariye.jpg" },
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 3", role: "Junior Analyst", image: "", description: "" },
     ]
   },
   {
     sector: "Industrials",
-    pm: { name: "Darshan Nandha", role: "Portfolio Manager", image: "/people/.jpg" },
+    pm: { name: "Mike Chen", role: "Portfolio Manager", image: "/people/mike.jpg", description: "Michael is a third-year BBA student at Wilfrid Laurier University. This is his fourth term in the analyst program, and he is looking forward to contributing as a portfolio manager for the fund's inception. Recently, Michael completed his second term at Onex as an investment analyst for the L/S Global Special Situations Fund and the L/O U.S. Equities Fund. This upcoming fall, he will be joining TD Securities as an Investment Banking Analyst. Outside of his studies and work, Michael enjoys playing poker with friends, thrifting, fishing, camping, taking spontaneous road trips, and car spotting. " },
     seniors: [
-      { name: "Erin Howard", role: "Senior Analyst", image: "/people/erin.jpg" },
-      { name: "Senior 2", role: "Senior Analyst", image: "/people/.jpg" },
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
     ],
     juniors: [
-      { name: "Madis Hahn", role: "Junior Analyst", image: "/people/madis.jpg" },
-      { name: "Junior 2", role: "Junior Analyst", image: "/people/.jpg" },
-      { name: "Junior 3", role: "Junior Analyst", image: "/people/.jpg" },
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
     ]
   },
   {
-    sector: "Consumers",
-    pm: { name: "PM 1", role: "Portfolio Manager", image: "/people/.jpg" },
+    sector: "Consumer",
+    pm: { name: "Milos Micic", role: "Portfolio Manager", image: "", description: "" },
     seniors: [
-      { name: "Senior 1", role: "Senior Analyst", image: "/people/.jpg" },
-   
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+      { name: "Senior Analyst 2", role: "Senior Analyst", image: "", description: "" },
     ],
     juniors: [
-            { name: "Gaurav Kaka", role: "Junior Analyst", image: "/people/gaurav.jpg" },
-        { name: "Anna Freeman", role: "Junior Analyst", image: "/people/anna.jpg" },
-         { name: "Keira Bardhi", role: "Junior Analyst", image: "/people/.jpg" },
-    
-     { name: "Josh Walker", role: "Junior Analyst", image: "/people/josh-w.jpg" },
-
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 3", role: "Junior Analyst", image: "", description: "" },
     ]
   },
+  {
+    sector: "Energy & Utilities",
+    pm: { name: "Parker Solem", role: "Portfolio Manager", image: "", description: "" },
+    seniors: [
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+    ],
+    juniors: [
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+    ]
+  },
+  {
+    sector: "Healthcare",
+    pm: { name: "PM Name", role: "Portfolio Manager", image: "", description: "" },
+    seniors: [
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+      { name: "Senior Analyst 2", role: "Senior Analyst", image: "", description: "" },
+    ],
+    juniors: [
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+    ]
+  },
+  {
+    sector: "Metals & Mining",
+    pm: { name: "PM Name", role: "Portfolio Manager", image: "", description: "" },
+    seniors: [
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+    ],
+    juniors: [
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+    ]
+  },
+  {
+    sector: "TMT",
+    pm: { name: "PM Name", role: "Portfolio Manager", image: "", description: "" },
+    seniors: [
+      { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
+      { name: "Senior Analyst 2", role: "Senior Analyst", image: "", description: "" },
+    ],
+    juniors: [
+      { name: "Junior Analyst 1", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 2", role: "Junior Analyst", image: "", description: "" },
+      { name: "Junior Analyst 3", role: "Junior Analyst", image: "", description: "" },
+    ]
+  }
 ];
 
 const WIF_DATA = [
   {
     sector: "",
-    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/people/anastasia.jpg" },
+    pm: { name: "Anastasia Paraskevopoulos", role: "Program Director", image: "/people/anastasia.jpg", description: "" },
     seniors: [
-      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/people/giuliana.jpeg" },
-
-         { name: "Isabela Petri", role: "Senior Analyst", image: "/people/Isabela.jpg" },
+      { name: "Giuliana Mascitti", role: "Senior Analyst", image: "/people/giuliana.jpeg", description: "" },
+      { name: "Isabela Petri", role: "Senior Analyst", image: "/people/Isabela.jpg", description: "" },
     ],
     juniors: [
-         { name: "Tanya Khan", role: "Analyst", image: "/people/tanya.jpg" },
-         { name: "Lauryne Assa", role: "Analyst", image: "/people/lauryne.jpg" },
-      { name: "Sarah Neske", role: "Analyst", image: "/people/sarah.jpg" }
+      { name: "Tanya Khan", role: "Analyst", image: "/people/tanya.jpg", description: "" },
+      { name: "Lauryne Assa", role: "Analyst", image: "/people/lauryne.jpg", description: "" },
+      { name: "Sarah Neske", role: "Analyst", image: "/people/sarah.jpg", description: "" }
     ]
   }
 ];
@@ -92,32 +120,35 @@ const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
   "Fall 2025": [
     {
       sector: "Previous Analysts",
-      pm: { name: "Ben Allday", role: "Senior Analyst", image: "/people/ben-allday.jpg" },
+      pm: { name: "Ben Allday", role: "Senior Analyst", image: "/people/ben-allday.jpg", description: "" },
       seniors: [
-        { name: "Parker Solem", role: "Senior Analyst", image: "/people/parker.jpg" },
-        { name: "Past Senior 2", role: "Senior Analyst", image: "" }
+        { name: "Parker Solem", role: "Senior Analyst", image: "/people/parker.jpg", description: "" },
+        { name: "Past Senior 2", role: "Senior Analyst", image: "", description: "" }
       ],
       juniors: [
-        { name: "Past Junior 1", role: "Junior Analyst", image: "" },
-        { name: "Past Junior 2", role: "Junior Analyst", image: "" },
-        { name: "Past Junior 3", role: "Junior Analyst", image: "" }
+        { name: "Past Junior 1", role: "Junior Analyst", image: "", description: "" },
+        { name: "Past Junior 2", role: "Junior Analyst", image: "", description: "" },
+        { name: "Past Junior 3", role: "Junior Analyst", image: "", description: "" }
       ]
     },
-        {
+    {
       sector: "Previous Analysts",
-      pm: { name: "Historical PM", role: "Portfolio Manager", image: "" },
+      pm: { name: "Historical PM", role: "Portfolio Manager", image: "", description: "" },
       seniors: [
-        { name: "Past Senior", role: "Senior Analyst", image: "" },
-        { name: "Past Senior 2", role: "Senior Analyst", image: "" }
+        { name: "Past Senior", role: "Senior Analyst", image: "", description: "" },
+        { name: "Past Senior 2", role: "Senior Analyst", image: "", description: "" }
       ],
       juniors: [
-        { name: "Past Junior 1", role: "Junior Analyst", image: "" },
-        { name: "Past Junior 2", role: "Junior Analyst", image: "" },
-        { name: "Past Junior 3", role: "Junior Analyst", image: "" }
+        { name: "Past Junior 1", role: "Junior Analyst", image: "", description: "" },
+        { name: "Past Junior 2", role: "Junior Analyst", image: "", description: "" },
+        { name: "Past Junior 3", role: "Junior Analyst", image: "", description: "" }
       ]
     }
   ]
 };
+
+// Premium custom easing for all animations
+const customEase = [0.22, 1, 0.36, 1];
 
 export default function ResearchCohort() {
   const [openArchive, setOpenArchive] = useState<string | null>(null);
@@ -126,9 +157,24 @@ export default function ResearchCohort() {
   return (
     <section className="relative bg-[#0f1117] py-32 px-6 md:px-12 overflow-hidden border-t border-white/5" id="analysts">
       
-      {/* --- REFINED BACKGROUND SYSTEM --- */}
-      <div className="absolute top-0 left-0 w-[70%] h-[70%] bg-slate-800/10 rounded-full blur-[140px] pointer-events-none z-0" />
-      <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-red-950/5 rounded-full blur-[160px] pointer-events-none z-0" />
+      {/* --- REFINED & ANIMATED BACKGROUND SYSTEM --- */}
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.05, 1],
+          opacity: [0.08, 0.12, 0.08] 
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-0 left-0 w-[70%] h-[70%] bg-slate-800 rounded-full blur-[140px] pointer-events-none z-0" 
+      />
+      <motion.div 
+        animate={{ 
+          scale: [1, 1.1, 1],
+          opacity: [0.03, 0.06, 0.03] 
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-red-950 rounded-full blur-[160px] pointer-events-none z-0" 
+      />
+      
       <div 
         className="absolute inset-0 z-0 opacity-[0.18] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_50%,#000_30%,transparent_100%)]"
         style={{
@@ -148,13 +194,20 @@ export default function ResearchCohort() {
         {/* HEADER */}
         <div className="mb-32">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: customEase }}
             className="space-y-6"
           >
             <div className="flex items-center gap-4">
-              <div className="h-px w-10 bg-red-800" />
+              <motion.div 
+                initial={{ width: 0 }} 
+                whileInView={{ width: 40 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: customEase, delay: 0.2 }}
+                className="h-px bg-red-800" 
+              />
               <span className="text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block">Institutional Coverage</span>
             </div>
             <h2 className="text-4xl md:text-7xl font-serif text-white tracking-tighter leading-[0.9] flex flex-wrap gap-x-6">
@@ -166,18 +219,24 @@ export default function ResearchCohort() {
         {/* ACTIVE COHORT PODS */}
         <div className="space-y-28">
           {COHORT_DATA.map((pod, pIdx) => (
-            <SectorPod key={pIdx} pod={pod} />
+            <SectorPod key={pIdx} pod={pod} podIndex={pIdx} />
           ))}
         </div>
 
         {/* --- WIF SECTION --- */}
         <div className="mt-64 border-t border-white/5 pt-20">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: customEase }}
+            className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12"
+          >
             <div>
               <span className="text-red-800 font-sans font-bold text-[9px] uppercase tracking-[0.4em] block mb-2">Internal Initiatives</span>
               <h3 className="text-3xl font-serif text-white tracking-tight italic">Women in Finance</h3>
             </div>
-          </div>
+          </motion.div>
 
           <AnimatePresence mode="wait">
             {openWif && (
@@ -185,12 +244,12 @@ export default function ResearchCohort() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
+                transition={{ duration: 0.6, ease: customEase }}
                 className="overflow-hidden"
               >
                 <div className="py-20 space-y-32">
                   {WIF_DATA.map((pod, pIdx) => (
-                    <SectorPod key={`wif-${pIdx}`} pod={pod} />
+                    <SectorPod key={`wif-${pIdx}`} pod={pod} podIndex={pIdx} />
                   ))}
                 </div>
               </motion.div>
@@ -200,7 +259,13 @@ export default function ResearchCohort() {
 
         {/* --- ARCHIVE SECTION --- */}
         <div className="mt-32 border-t border-white/5 pt-20">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: customEase }}
+            className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12"
+          >
             <div>
               <span className="text-zinc-500 font-sans font-bold text-[9px] uppercase tracking-[0.4em] block mb-2">Historical Records</span>
               <h3 className="text-3xl font-serif text-white tracking-tight italic">Previous Analyst Cohorts</h3>
@@ -212,10 +277,10 @@ export default function ResearchCohort() {
                 className="w-full bg-[#1a1c23] border border-white/10 px-6 py-4 flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-widest text-zinc-300 hover:border-red-800/50 transition-all"
               >
                 <span className="flex items-center gap-2"><History size={12} className="text-red-800" /> Fall 25 Cohort</span>
-                <ChevronDown size={14} className={clsx("transition-transform duration-300", openArchive && "rotate-180")} />
+                <ChevronDown size={14} className={clsx("transition-transform duration-500 ease-[0.22,1,0.36,1]", openArchive && "rotate-180")} />
               </button>
             </div>
-          </div>
+          </motion.div>
 
           <AnimatePresence mode="wait">
             {openArchive && ( openArchive in ARCHIVE_DATA ) && (
@@ -223,12 +288,12 @@ export default function ResearchCohort() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
+                transition={{ duration: 0.6, ease: customEase }}
                 className="overflow-hidden"
               >
                 <div className="py-20 space-y-32">
                   {ARCHIVE_DATA[openArchive].map((pod, pIdx) => (
-                    <SectorPod key={`archive-${pIdx}`} pod={pod} isArchive />
+                    <SectorPod key={`archive-${pIdx}`} pod={pod} podIndex={pIdx} isArchive />
                   ))}
                 </div>
               </motion.div>
@@ -243,7 +308,7 @@ export default function ResearchCohort() {
 
 /* ===================== SECTOR POD SUB-COMPONENT ===================== */
 
-function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }) {
+function SectorPod({ pod, podIndex = 0, isArchive = false }: { pod: any, podIndex?: number, isArchive?: boolean }) {
   // For archives, we merge all members into a single array for equality
   const allMembers = isArchive 
     ? [pod.pm, ...pod.seniors, ...pod.juniors] 
@@ -251,40 +316,66 @@ function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }
 
   return (
     <div className={clsx("relative", isArchive && "opacity-60 hover:opacity-100 transition-opacity duration-500")}>
-      <div className="flex items-center gap-6 mb-10">
-        <div className="flex items-center gap-4 bg-white/[0.02] border border-white/10 px-6 py-2.5 backdrop-blur-2xl rounded-sm">
-          <Globe size={12} className={isArchive ? "text-zinc-500" : "text-red-800"} />
-          <h3 className="font-sans font-bold text-[10px] uppercase tracking-[0.4em] text-zinc-200">{pod.sector}</h3>
-        </div>
-        <div className="h-[1px] flex-1 bg-gradient-to-r from-white/5 via-white/5 to-transparent" />
-      </div>
+      
+      {/* Only render sector header if it has a valid sector name (omits empty WIF header) */}
+      {pod.sector && (
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: customEase }}
+          className="flex items-center gap-6 mb-10"
+        >
+          <div className="flex items-center gap-4 bg-white/[0.02] border border-white/10 px-6 py-2.5 backdrop-blur-2xl rounded-sm">
+            <Globe size={12} className={isArchive ? "text-zinc-500" : "text-red-800"} />
+            <h3 className="font-sans font-bold text-[10px] uppercase tracking-[0.4em] text-zinc-200">{pod.sector}</h3>
+          </div>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-white/5 via-white/5 to-transparent" />
+        </motion.div>
+      )}
 
       {isArchive ? (
         /* ARCHIVE VIEW: Flat Equality Grid */
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {allMembers.map((member, mIdx) => (
-            <MemberCard key={mIdx} member={member} />
+            <MemberCard key={mIdx} member={member} delay={mIdx * 0.05} />
           ))}
         </div>
       ) : (
         /* ACTIVE VIEW: Hierarchical Grid */
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-3">
-            <div className="mb-8 flex items-center gap-3">
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              whileInView={{ opacity: 1 }} 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-8 flex items-center gap-3"
+            >
               <Target size={14} className="text-red-800" />
               <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Pod Leader</p>
-            </div>
-            <MemberCard member={pod.pm} featured />
+            </motion.div>
+            <MemberCard member={pod.pm} featured delay={0.1} />
           </div>
 
           <div className="lg:col-span-9">
-            <div className="mb-8 flex items-center gap-3">
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              whileInView={{ opacity: 1 }} 
+              viewport={{ once: true }} 
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 flex items-center gap-3"
+            >
               <BarChart3 size={14} className="text-zinc-600" />
               <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Analysts</p>
-            </div>
+            </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {pod.seniors.map((senior: any, sIdx: number) => <MemberCard key={sIdx} member={senior} />)}
-              {pod.juniors.map((junior: any, jIdx: number) => <MemberCard key={jIdx} member={junior} isJunior />)}
+              {pod.seniors.map((senior: any, sIdx: number) => (
+                <MemberCard key={`senior-${sIdx}`} member={senior} delay={0.2 + (sIdx * 0.1)} />
+              ))}
+              {pod.juniors.map((junior: any, jIdx: number) => (
+                <MemberCard key={`junior-${jIdx}`} member={junior} isJunior delay={0.2 + ((pod.seniors.length + jIdx) * 0.1)} />
+              ))}
             </div>
           </div>
         </div>
@@ -295,13 +386,20 @@ function SectorPod({ pod, isArchive = false }: { pod: any, isArchive?: boolean }
 
 /* ===================== MEMBER CARD COMPONENT ===================== */
 
-function MemberCard({ member, featured = false, isJunior = false }: { member: any, featured?: boolean, isJunior?: boolean }) {
+function MemberCard({ member, featured = false, isJunior = false, delay = 0 }: { member: any, featured?: boolean, isJunior?: boolean, delay?: number }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group relative">
+    <motion.div 
+      initial={{ opacity: 0, y: 30, scale: 0.96 }} 
+      whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7, ease: customEase, delay }}
+      className="group relative"
+    >
       <div className={clsx(
         "relative bg-[#1a1c23] overflow-hidden border border-white/5 transition-all duration-700 group-hover:border-red-900/40 shadow-2xl aspect-[4/5]",
         featured && "ring-1 ring-white/10"
       )}>
+        {/* Image / Icon */}
         {member.image ? (
           <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
         ) : (
@@ -309,16 +407,26 @@ function MemberCard({ member, featured = false, isJunior = false }: { member: an
             <User size={featured ? 60 : 30} strokeWidth={0.5} />
           </div>
         )}
-        <div className="absolute top-3 left-3 w-2 h-2 border-t border-l border-white/10 group-hover:border-red-800 transition-colors" />
-        <div className="absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/10 group-hover:border-red-800 transition-colors" />
-        <div className="absolute bottom-0 left-0 h-1 w-0 bg-red-800 transition-all duration-700 group-hover:w-full z-20 shadow-[0_0_15px_rgba(153,27,27,0.5)]" />
+
+        {/* Hover Description Overlay with Slide-Up Text */}
+        <div className="absolute inset-0 bg-[#0f1117]/85 backdrop-blur-md p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-center items-center text-center">
+          <p className="text-zinc-300 text-xs font-sans leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1]">
+            {member.description || "Bio unavailable."}
+          </p>
+        </div>
+
+        {/* Decorative Borders */}
+        <div className="absolute top-3 left-3 w-2 h-2 border-t border-l border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
+        <div className="absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 h-1 w-0 bg-red-800 transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:w-full z-20 shadow-[0_0_15px_rgba(153,27,27,0.5)] pointer-events-none" />
       </div>
 
-      <div className="mt-5 space-y-1">
-        <h4 className={clsx("font-serif text-zinc-100 group-hover:text-white transition-colors", featured ? "text-2xl md:text-3xl" : "text-[15px] md:text-md")}>
+      {/* Member Details */}
+      <div className="mt-5 space-y-1 relative z-30">
+        <h4 className={clsx("font-serif text-zinc-100 group-hover:text-white transition-colors duration-300", featured ? "text-2xl md:text-3xl" : "text-[15px] md:text-md")}>
           {member.name}
         </h4>
-        <p className={clsx("font-sans font-bold uppercase tracking-[0.25em]", isJunior ? "text-[8px] text-zinc-600 group-hover:text-zinc-400" : "text-[9px] text-red-800/70 group-hover:text-red-500")}>
+        <p className={clsx("font-sans font-bold uppercase tracking-[0.25em] transition-colors duration-300", isJunior ? "text-[8px] text-zinc-600 group-hover:text-zinc-400" : "text-[9px] text-red-800/70 group-hover:text-red-500")}>
           {member.role}
         </p>
       </div>
