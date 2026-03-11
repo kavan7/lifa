@@ -338,7 +338,13 @@ function SectorPod({ pod, podIndex = 0, isArchive = false }: { pod: any, podInde
         /* ARCHIVE VIEW: Flat Equality Grid */
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {allMembers.map((member, mIdx) => (
-            <MemberCard key={mIdx} member={member} delay={mIdx * 0.05} />
+            <MemberCard 
+              key={mIdx} 
+              member={member} 
+              delay={mIdx * 0.05} 
+              // Flip to left side tooltip for the last 3 items in a 6-col grid to prevent screen overflow
+              alignPopover={(mIdx % 6) >= 3 ? "left" : "right"}
+            />
           ))}
         </div>
       ) : (
@@ -355,7 +361,7 @@ function SectorPod({ pod, podIndex = 0, isArchive = false }: { pod: any, podInde
               <Target size={14} className="text-red-800" />
               <p className="text-[10px] font-sans font-bold text-zinc-500 uppercase tracking-widest">Pod Leader</p>
             </motion.div>
-            <MemberCard member={pod.pm} featured delay={0.1} />
+            <MemberCard member={pod.pm} featured delay={0.1} alignPopover="right" />
           </div>
 
           <div className="lg:col-span-9">
@@ -371,11 +377,26 @@ function SectorPod({ pod, podIndex = 0, isArchive = false }: { pod: any, podInde
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {pod.seniors.map((senior: any, sIdx: number) => (
-                <MemberCard key={`senior-${sIdx}`} member={senior} delay={0.2 + (sIdx * 0.1)} />
+                <MemberCard 
+                  key={`senior-${sIdx}`} 
+                  member={senior} 
+                  delay={0.2 + (sIdx * 0.1)} 
+                  // In a 5-col grid, the last 2 items should pop tooltip to the left
+                  alignPopover={(sIdx % 5) >= 3 ? "left" : "right"}
+                />
               ))}
-              {pod.juniors.map((junior: any, jIdx: number) => (
-                <MemberCard key={`junior-${jIdx}`} member={junior} isJunior delay={0.2 + ((pod.seniors.length + jIdx) * 0.1)} />
-              ))}
+              {pod.juniors.map((junior: any, jIdx: number) => {
+                const overallIdx = pod.seniors.length + jIdx;
+                return (
+                  <MemberCard 
+                    key={`junior-${jIdx}`} 
+                    member={junior} 
+                    isJunior 
+                    delay={0.2 + (overallIdx * 0.1)} 
+                    alignPopover={(overallIdx % 5) >= 3 ? "left" : "right"}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
@@ -386,50 +407,102 @@ function SectorPod({ pod, podIndex = 0, isArchive = false }: { pod: any, podInde
 
 /* ===================== MEMBER CARD COMPONENT ===================== */
 
-function MemberCard({ member, featured = false, isJunior = false, delay = 0 }: { member: any, featured?: boolean, isJunior?: boolean, delay?: number }) {
+function MemberCard({ 
+  member, 
+  featured = false, 
+  isJunior = false, 
+  delay = 0,
+  alignPopover = "right" 
+}: { 
+  member: any, 
+  featured?: boolean, 
+  isJunior?: boolean, 
+  delay?: number,
+  alignPopover?: "left" | "right"
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const isLeft = alignPopover === "left";
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 30, scale: 0.96 }} 
       whileInView={{ opacity: 1, y: 0, scale: 1 }} 
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, ease: customEase, delay }}
-      className="group relative"
+      // Z-index dynamically elevates so the side-tooltip never gets clipped by neighboring cards
+      className={clsx("relative", isHovered ? "z-50" : "z-10")} 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={clsx(
-        "relative bg-[#1a1c23] overflow-hidden border border-white/5 transition-all duration-700 group-hover:border-red-900/40 shadow-2xl aspect-[4/5]",
-        featured && "ring-1 ring-white/10"
-      )}>
-        {/* Image / Icon */}
-        {member.image ? (
-          <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-zinc-800">
-            <User size={featured ? 60 : 30} strokeWidth={0.5} />
-          </div>
-        )}
+      <div className="group">
+        <div className={clsx(
+          "relative bg-[#1a1c23] overflow-hidden border border-white/5 transition-all duration-700 group-hover:border-red-900/40 shadow-2xl aspect-[4/5]",
+          featured && "ring-1 ring-white/10"
+        )}>
+          {/* Image / Icon */}
+          {member.image ? (
+            <Image src={member.image} alt={member.name} fill className="object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105 opacity-80 group-hover:opacity-100" />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center text-zinc-800">
+              <User size={featured ? 60 : 30} strokeWidth={0.5} />
+            </div>
+          )}
 
-        {/* Hover Description Overlay with Slide-Up Text */}
-        <div className="absolute inset-0 bg-[#0f1117]/85 backdrop-blur-md p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-center items-center text-center">
-          <p className="text-zinc-300 text-xs font-sans leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1]">
-            {member.description || "Bio unavailable."}
-          </p>
+          {/* Decorative Borders */}
+          <div className="absolute top-3 left-3 w-2 h-2 border-t border-l border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
+          <div className="absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 h-1 w-0 bg-red-800 transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:w-full z-20 shadow-[0_0_15px_rgba(153,27,27,0.5)] pointer-events-none" />
         </div>
 
-        {/* Decorative Borders */}
-        <div className="absolute top-3 left-3 w-2 h-2 border-t border-l border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
-        <div className="absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 h-1 w-0 bg-red-800 transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:w-full z-20 shadow-[0_0_15px_rgba(153,27,27,0.5)] pointer-events-none" />
+        {/* Member Details */}
+        <div className="mt-5 space-y-1 relative z-30">
+          <h4 className={clsx("font-serif text-zinc-100 group-hover:text-white transition-colors duration-300", featured ? "text-2xl md:text-3xl" : "text-[15px] md:text-md")}>
+            {member.name}
+          </h4>
+          <p className={clsx("font-sans font-bold uppercase tracking-[0.25em] transition-colors duration-300", isJunior ? "text-[8px] text-zinc-600 group-hover:text-zinc-400" : "text-[9px] text-red-800/70 group-hover:text-red-500")}>
+            {member.role}
+          </p>
+        </div>
       </div>
 
-      {/* Member Details */}
-      <div className="mt-5 space-y-1 relative z-30">
-        <h4 className={clsx("font-serif text-zinc-100 group-hover:text-white transition-colors duration-300", featured ? "text-2xl md:text-3xl" : "text-[15px] md:text-md")}>
-          {member.name}
-        </h4>
-        <p className={clsx("font-sans font-bold uppercase tracking-[0.25em] transition-colors duration-300", isJunior ? "text-[8px] text-zinc-600 group-hover:text-zinc-400" : "text-[9px] text-red-800/70 group-hover:text-red-500")}>
-          {member.role}
-        </p>
-      </div>
+      {/* SUPER PROFESSIONAL SIDE POPOVER */}
+      <AnimatePresence>
+        {isHovered && member.description && (
+          <motion.div
+            initial={{ opacity: 0, x: isLeft ? 10 : -10, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: isLeft ? 5 : -5, scale: 0.98 }}
+            transition={{ duration: 0.3, ease: customEase }}
+            className={clsx(
+              "absolute z-[100] pointer-events-none",
+              // On Mobile: drop down below the card
+              "top-full left-0 right-0 mt-4",
+              // On Desktop: sleek side panel
+              "md:top-0 md:mt-0 md:w-[320px]",
+              isLeft ? "md:right-full md:mr-6 md:left-auto" : "md:left-full md:ml-6 md:right-auto"
+            )}
+          >
+            <div className="relative p-6 bg-[#13151b]/95 border border-red-900/30 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] rounded-sm">
+              
+              {/* Responsive Triangle Pointer */}
+              <div className={clsx(
+                "absolute bg-[#13151b] border-red-900/30 rotate-45",
+                // Mobile Triangle (pointing up)
+                "-top-1.5 left-8 w-3 h-3 border-l border-t md:hidden",
+                // Desktop Triangle (pointing left or right)
+                "md:block md:top-8 md:-top-auto md:w-3 md:h-3",
+                isLeft 
+                  ? "md:-right-1.5 md:left-auto md:border-r md:border-t md:border-l-0 md:border-b-0" 
+                  : "md:-left-1.5 md:right-auto md:border-l md:border-b md:border-r-0 md:border-t-0"
+              )} />
+              
+              <p className="text-zinc-300 text-[11.5px] font-sans leading-relaxed relative z-10">
+                {member.description}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
