@@ -29,7 +29,7 @@ const COHORT_DATA = [
   },
   {
     sector: "Industrials",
-    pm: { name: "Mike Chen", role: "Portfolio Manager", image: "/people/mike.jpg", description: "Michael is a third-year BBA student at Wilfrid Laurier University. This is his fourth term in the analyst program, and he is looking forward to contributing as a portfolio manager for the fund's inception. Recently, Michael completed his second term at Onex as an investment analyst for the L/S Global Special Situations Fund and the L/O U.S. Equities Fund. This upcoming fall, he will be joining TD Securities as an Investment Banking Analyst. Outside of his studies and work, Michael enjoys playing poker with friends, thrifting, fishing, camping, taking spontaneous road trips, and car spotting. " },
+    pm: { name: "Michael Chen", role: "Portfolio Manager", image: "/people/mike.jpg", description: "Michael is a third-year BBA student at Wilfrid Laurier University. This is his fourth term in the analyst program, and he is looking forward to contributing as a portfolio manager for the fund's inception. Recently, Michael completed his second term at Onex as an investment analyst for the L/S Global Special Situations Fund and the L/O U.S. Equities Fund. This upcoming fall, he will be joining TD Securities as an Investment Banking Analyst. Outside of his studies and work, Michael enjoys playing poker with friends, thrifting, fishing, camping, taking spontaneous road trips, and car spotting. " },
     seniors: [
       { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
     ],
