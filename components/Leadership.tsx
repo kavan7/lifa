@@ -3,54 +3,62 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronDown, History, LucidePersonStanding, PersonStanding, User } from "lucide-react";
+import { ChevronDown, User } from "lucide-react";
 import clsx from "clsx";
 
 /**
  * REFINED LEADERSHIP SECTION
  * - Hierarchy: Executive Tier (3-col) -> Management/Archive Tier (4-col).
- * - Optimization: High-fidelity image rendering with expanded 'sizes' for 4-column layout.
+ * - Optimization: High-fidelity image rendering with programmatic modern placeholders.
  */
 
 const EXECUTIVE_TEAM = [
   { 
     name: "Stephen Stack", 
     title: "Co-President", 
-    image: "/people/stephen.jpg",
-    description: ""
+    image: null,
+    description: "Driving strategic initiatives and overseeing all chapter operations."
   },
   { 
     name: "Linda Basha", 
     title: "Co-President", 
-    image: "/people/linda.jpg",
-    description: ""
+    image: null,
+    description: "Leading executive strategy and corporate relations."
   },
   { 
     name: "Ainslie Loveys", 
     title: "Executive VP", 
-    image: "/people/ainslie.jpg",
-    description: ""
+    image: null,
+    description: "Managing internal teams and cross-functional project execution."
   },
 ];
 
 const MANAGEMENT_TEAM = [
-  { name: "Keeret Grewal", title: "Vice President, Investments", image: "/people/keeret.jpg" },
-  { name: "Ben Chillian", title: "Vice President, Investments", image: "/people/ben.jpg" },
-  { name: "Person 5", title: "Vice president, Corporate", image: "/people/placeholder.jpg" },
-  { name: "Person 6", title: "Vice President, Events", image: "/people/placeholder.jpg" },
-  { name: "Cole Gittens", title: "Vice President, Marketing", image: "/people/cole.jpg" },
-  { name: "Tanya Khan", title: "Vice President, Marketing", image: "/people/tanya-cropped.jpg" },
-  { name: "Person 7", title: "Vice President, Technology", image: "/people/placeholder.jpg" },
+  { name: "Keeret Grewal", title: "Vice President, Investments", image: null },
+  { name: "Ben Chillian", title: "Vice President, Investments", image: null },
+  { name: "Person 5", title: "Vice president, Corporate", image: null },
+  { name: "Person 6", title: "Vice President, Events", image: null },
+  { name: "Cole Gittens", title: "Vice President, Marketing", image: null },
+  { name: "Tanya Khan", title: "Vice President, Marketing", image: null },
+  { name: "Kavan Abeyratne", title: "Vice President, Technology", image: null },
 ];
 
 const DIRECTOR_ARCHIVE: Record<string, any[]> = {
   "25/26": [
-    { name: "Adam Fortura", title: "Director, Marketing", image: "/people/adam.jpg" },
-    { name: "Cole Vagueiro", title: "Director, Events", image: "/people/cole-v.jpg" },
-    { name: "Andy Sun", title: "First-Year Executive", image: "/people/andy.jpg" },
-    { name: "Lucas Campagnoni", title: "First-Year Executive", image: "/people/lucas-cropped.jpg" },
-    
+    { name: "Adam Fortura", title: "Director, Marketing", image: null },
+    { name: "Cole Vagueiro", title: "Director, Events", image: null },
+    { name: "Andy Sun", title: "First-Year Executive", image: null },
+    { name: "Lucas Campagnoni", title: "First-Year Executive", image: null },
   ]
+};
+
+// Utility to get initials for the placeholder
+const getInitials = (name: string) => {
+  const parts = name.split(" ");
+  if (parts.length >= 2) {
+    return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
+  }
+  return name.substring(0, 2).toUpperCase();
 };
 
 export default function Leadership() {
@@ -98,7 +106,7 @@ export default function Leadership() {
             className="flex items-center gap-4"
           >
              <h3 className="font-sans font-bold text-[10px] uppercase tracking-[0.2em] text-zinc-400">
-                Vice Presidents & Management
+               Vice Presidents & Management
              </h3>
              <div className="h-px flex-1 bg-zinc-100" />
           </motion.div>
@@ -194,26 +202,30 @@ function ProfileCard({
         isArchive && "opacity-80 hover:opacity-100 transition-opacity"
       )}
     >
-      {/* IMAGE CONTAINER */}
-      <div className="relative aspect-[4/5] bg-zinc-100 mb-4 overflow-hidden shadow-sm border border-zinc-100/50">
+      {/* IMAGE / PLACEHOLDER CONTAINER */}
+      <div className="relative aspect-[4/5] bg-zinc-200 mb-4 overflow-hidden shadow-sm border border-zinc-200/50 rounded-sm">
         {member.image ? (
           <Image
             src={member.image}
             alt={member.name}
             fill
-            quality={100} // Maintains original fidelity
-            priority={priority} // Optimization for top-tier images
-            /* Updated sizes for 4-column layout (approx 25vw on desktop) */
+            quality={100}
+            priority={priority}
             sizes={isExecutive ? "(max-width: 768px) 100vw, 33vw" : "(max-width: 768px) 50vw, 25vw"}
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             style={{ 
-                // Prevents aliasing during hover animations
                 imageRendering: "auto",
                 WebkitBackfaceVisibility: "hidden" 
             }}
           />
         ) : (
-          <div className="absolute inset-0 bg-zinc-200 transition-transform duration-700 group-hover:scale-105" />
+          /* MODERN PROGRAMMATIC PLACEHOLDER */
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+             <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
+             <span className="text-zinc-400/50 font-serif text-6xl tracking-tighter drop-shadow-sm select-none">
+               {getInitials(member.name)}
+             </span>
+          </div>
         )}
         
         <div className="absolute inset-0 bg-zinc-950/0 group-hover:bg-zinc-950/40 transition-all duration-500" />

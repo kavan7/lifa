@@ -17,6 +17,8 @@ const COHORT_DATA = [
   {
     sector: "FIG",
     pm: { name: "Ben Allday", role: "Portfolio Manager", image: "/people/ben-allday-cropped.jpg", description: "Ben is a third-year BBA student at Wilfrid Laurier University, who has been involved in LIFA, ACIIC, and LCT. This is his fourth term in the LIFA analyst program, and he is looking forward to contributing as a FIG portfolio manager for the fund's inception. Ben has completed multiple buy-side internships, including analyst positions at Peloton Capital Management and Empire Life Investments. Next summer, he will be joining Ares Management as a Private Equity Summer Analyst. Outside of his studies and work, Ben enjoys hanging out with his friends, reading (fiction and non-fiction), and going on walks." },
+    
+ 
     seniors: [
       { name: "Senior Analyst 1", role: "Senior Analyst", image: "", description: "" },
       { name: "Senior Analyst 2", role: "Senior Analyst", image: "", description: "" },
@@ -126,7 +128,7 @@ const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
         { name: "Past Senior 2", role: "Senior Analyst", image: "", description: "" }
       ],
       juniors: [
-        { name: "Past Junior 1", role: "Junior Analyst", image: "", description: "" },
+        { name: "Kavan Abeyratne", role: "Junior Analyst", image: "", description: "" },
         { name: "Past Junior 2", role: "Junior Analyst", image: "", description: "" },
         { name: "Past Junior 3", role: "Junior Analyst", image: "", description: "" }
       ]
