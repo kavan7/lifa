@@ -128,7 +128,7 @@ const ARCHIVE_DATA: Record<string, typeof COHORT_DATA> = {
         { name: "Past Senior 2", role: "Senior Analyst", image: "", description: "" }
       ],
       juniors: [
-        { name: "Kavan Abeyratne", role: "Junior Analyst", image: "", description: "" },
+        { name: "Past Junior 1", role: "Junior Analyst", image: "", description: "" },
         { name: "Past Junior 2", role: "Junior Analyst", image: "", description: "" },
         { name: "Past Junior 3", role: "Junior Analyst", image: "", description: "" }
       ]
