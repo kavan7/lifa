@@ -12,7 +12,7 @@ export default function Home() {
     <HeroSection/>
     <KeyStats/>
     <SectorsSection/>
-    <Leadership/>
+  <Leadership/>
    <Analysts/>
     <Footer/>
     </div>

@@ -1,13 +1,10 @@
-[00:00:01.608] Server  LOG      ✓ Ready in 1168ms
-[00:00:04.828] Server  WARN    Image with src "/newest-background-best.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+[00:00:01.200] Server  LOG      ✓ Ready in 845ms
+[00:00:03.496] Server  WARN    Image with src "/newest-background-best.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.127] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.127] Browser WARN    Image with src "/newest-background-best.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+[00:00:03.868] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.868] Browser WARN    Image with src "/newest-background-best.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:00:05.348] Browser WARN    Image with src "/logo3.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:05.348] Browser WARN    Image with src "/logo3.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:12.311] Browser WARN    Image with src "/people/ben-allday-cropped.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:15.498] Browser WARN    Image with src "/people/mike-cropped.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:28.672] Server  LOG      ✓ Compiled in 40ms
-[00:00:53.996] Server  LOG      ✓ Compiled in 35ms
+[00:00:04.096] Browser WARN    Image with src "/logo3.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:28.028] Server  LOG      ✓ Compiled in 103ms
+[00:00:28.934] Browser WARN    Image with src "/people/mike-cropped.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:35.084] Server  LOG      ✓ Compiled in 108ms

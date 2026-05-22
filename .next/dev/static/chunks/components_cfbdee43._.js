@@ -16,6 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/globe.js [app-client] (ecmascript) <export default as Globe>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-client] (ecmascript) <export default as ChevronDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$history$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__History$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/history.js [app-client] (ecmascript) <export default as History>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/calendar.js [app-client] (ecmascript) <export default as Calendar>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-client] (ecmascript)");
 ;
@@ -27,271 +28,544 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 /**
- * RESEARCH COHORT - INDUSTRIAL SLATE THEME
- * - Features: Active Winter 26 Cohort 
- * - Expansion: Women in Finance (WIF) Program
- * - Expansion: Historical Archives
- */ const COHORT_DATA = [
-    {
-        sector: "FIG",
-        pm: {
-            name: "Ben Allday",
-            role: "Portfolio Manager",
-            image: "/people/ben-allday-cropped.jpg",
-            description: "Ben is a third-year BBA student at Wilfrid Laurier University, who has been involved in LIFA, ACIIC, and LCT. This is his fourth term in the LIFA analyst program, and he is looking forward to contributing as a FIG portfolio manager for the fund's inception. Ben has completed multiple buy-side internships, including analyst positions at Peloton Capital Management and Empire Life Investments. Next summer, he will be joining Ares Management as a Private Equity Summer Analyst. Outside of his studies and work, Ben enjoys hanging out with his friends, reading (fiction and non-fiction), and going on walks."
+ * MASTER COHORT REGISTRY - 2026/2027 ACADEMIC YEAR
+ * Mapped exactly to match the rows and columns of the master team schedule.
+ */ const SEASONAL_COHORT_DATA = {
+    Spring: [
+        {
+            sector: "TMT",
+            pm: {
+                name: "Jack Ross",
+                role: "Portfolio Manager",
+                image: "",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Jenson Cropley",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: []
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
+        {
+            sector: "FIG",
+            pm: {
+                name: "Ben Allday",
+                role: "Portfolio Manager",
+                image: "/people/ben-allday-cropped.jpg",
+                description: "Ben is a third-year BBA student at Wilfrid Laurier University, who has been involved in LIFA, ACIIC, and LCT. This is his fourth term in the LIFA analyst program, and he is looking forward to contributing as a FIG portfolio manager for the fund's inception. Ben has completed multiple buy-side internships, including analyst positions at Peloton Capital Management and Empire Life Investments. Next summer, he will be joining Ares Management as a Private Equity Summer Analyst. Outside of his studies and work, Ben enjoys hanging out with his friends, reading (fiction and non-fiction), and going on walks."
             },
-            {
-                name: "Senior Analyst 2",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            },
-            {
-                name: "Junior Analyst 3",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "Industrials",
-        pm: {
-            name: "Michael Chen",
-            role: "Portfolio Manager",
-            image: "/people/mike-cropped.jpg",
-            description: "Michael is a third-year BBA student at Wilfrid Laurier University. This is his fourth term in the analyst program, and he is looking forward to contributing as a portfolio manager for the fund's inception. Recently, Michael completed his second term at Onex as an investment analyst for the L/S Global Special Situations Fund and the L/O U.S. Equities Fund. This upcoming fall, he will be joining TD Securities as an Investment Banking Analyst. Outside of his studies and work, Michael enjoys playing poker with friends, thrifting, fishing, camping, taking spontaneous road trips, and car spotting. "
+            seniors: [
+                {
+                    name: "Anson Lee",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Sophia Qu",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Markus Sumi",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: []
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
+        {
+            sector: "Industrials",
+            pm: {
+                name: "Michael Chen",
+                role: "Portfolio Manager",
+                image: "/people/mike-cropped.jpg",
+                description: "Michael is a third-year BBA student at Wilfrid Laurier University. This is his fourth term in the analyst program, and he is looking forward to contributing as a portfolio manager for the fund's inception. Recently, Michael completed his second term at Onex as an investment analyst for the L/S Global Special Situations Fund and the L/O U.S. Equities Fund. This upcoming fall, he will be joining TD Securities as an Investment Banking Analyst. Outside of his studies and work, Michael enjoys playing poker with friends, thrifting, fishing, camping, taking spontaneous road trips, and car spotting. "
             },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "Consumer",
-        pm: {
-            name: "Milos Micic",
-            role: "Portfolio Manager",
-            image: "",
-            description: ""
+            seniors: [
+                {
+                    name: "Tylor Llewellyn",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Maurya Shah",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: []
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
+        {
+            sector: "Consumer",
+            pm: {
+                name: "Milos Micic",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Senior Analyst 2",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            },
-            {
-                name: "Junior Analyst 3",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "Energy & Utilities",
-        pm: {
-            name: "Parker Solem",
-            role: "Portfolio Manager",
-            image: "",
-            description: ""
+            seniors: [
+                {
+                    name: "Michelle Peng",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: []
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
+        {
+            sector: "Healthcare",
+            pm: {
+                name: "Danny Zhang",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "Healthcare",
-        pm: {
-            name: "PM Name",
-            role: "Portfolio Manager",
-            image: "",
-            description: ""
+            seniors: [
+                {
+                    name: "Rayhan Bahadurali",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: []
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
+        {
+            sector: "Energy & Utilities",
+            pm: {
+                name: "Vacant PM",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Senior Analyst 2",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
+            seniors: [],
+            juniors: []
+        }
+    ],
+    Fall: [
+        {
+            sector: "TMT",
+            pm: {
+                name: "John Van Wyk",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "Metals & Mining",
-        pm: {
-            name: "PM Name",
-            role: "Portfolio Manager",
-            image: "",
-            description: ""
+            seniors: [
+                {
+                    name: "Ally Stewart",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Luca Tersigni",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Keira Bardhi",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Josh Walker",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Kellan Sneyd",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Yuxuan Sun",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
+        {
+            sector: "FIG",
+            pm: {
+                name: "Ben Allday & Linda Basha",
+                role: "Portfolio Managers",
                 image: "",
                 description: ""
             },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
-                image: "",
-                description: ""
-            }
-        ]
-    },
-    {
-        sector: "TMT",
-        pm: {
-            name: "PM Name",
-            role: "Portfolio Manager",
-            image: "",
-            description: ""
+            seniors: [
+                {
+                    name: "Markus Sumi",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Tanya Khan",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Christian Kristo",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Nikheil Modi",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Darius Montazeri",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
         },
-        seniors: [
-            {
-                name: "Senior Analyst 1",
-                role: "Senior Analyst",
+        {
+            sector: "Industrials",
+            pm: {
+                name: "Kieran Allo",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Senior Analyst 2",
-                role: "Senior Analyst",
-                image: "",
-                description: ""
-            }
-        ],
-        juniors: [
-            {
-                name: "Junior Analyst 1",
-                role: "Junior Analyst",
+            seniors: [
+                {
+                    name: "Anna Freeman",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Aaron Yu",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Lucas Campagnoni",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Josh Kotler",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Juliana Sierra-Botero",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Consumer",
+            pm: {
+                name: "Danny Zhang",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Junior Analyst 2",
-                role: "Junior Analyst",
+            seniors: [
+                {
+                    name: "Michelle Peng",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Gaurav Kaka",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Mathusha Sivaratnam",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Abtin Ghafourzadeh",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Treesha Ray",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Siya Uppal",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Healthcare",
+            pm: {
+                name: "Vacant PM",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
             },
-            {
-                name: "Junior Analyst 3",
-                role: "Junior Analyst",
+            seniors: [],
+            juniors: []
+        },
+        {
+            sector: "Energy & Utilities",
+            pm: {
+                name: "Vacant PM",
+                role: "Portfolio Manager",
                 image: "",
                 description: ""
-            }
-        ]
-    }
-];
+            },
+            seniors: [],
+            juniors: []
+        }
+    ],
+    Winter: [
+        {
+            sector: "TMT",
+            pm: {
+                name: "Jack Ross",
+                role: "Portfolio Manager",
+                image: "",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Ally Stewart",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Keira Bardhi",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Josh Walker",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Kellan Sneyd",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "FIG",
+            pm: {
+                name: "Ben Allday & Linda Basha",
+                role: "Portfolio Managers",
+                image: "",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Anson Lee",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Sophia Qu",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Markus Sumi",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Christian Kristo",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Nikheil Modi",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Industrials",
+            pm: {
+                name: "Michael Chen",
+                role: "Portfolio Manager",
+                image: "/people/mike-cropped.jpg",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Maurya Shah",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Christian Cerovac",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Lucas Campagnoni",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Josh Kotler",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Consumer",
+            pm: {
+                name: "Milos Micic",
+                role: "Portfolio Manager",
+                image: "",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Tylor Llewellyn",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Kavan Abeyratne",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Darius Montazeri",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Healthcare",
+            pm: {
+                name: "Danny Zhang",
+                role: "Portfolio Manager",
+                image: "",
+                description: ""
+            },
+            seniors: [
+                {
+                    name: "Rayhan Bahadurali",
+                    role: "Senior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ],
+            juniors: [
+                {
+                    name: "Siya Uppal",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        },
+        {
+            sector: "Energy & Utilities",
+            pm: {
+                name: "Parker Solem",
+                role: "Portfolio Manager",
+                image: "",
+                description: ""
+            },
+            seniors: [],
+            juniors: [
+                {
+                    name: "Abtin Ghafourzadeh",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Treesha Ray",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                },
+                {
+                    name: "Juliana Sierra-Botero",
+                    role: "Junior Analyst",
+                    image: "",
+                    description: ""
+                }
+            ]
+        }
+    ]
+};
 const WIF_DATA = [
     {
         sector: "",
@@ -338,7 +612,7 @@ const WIF_DATA = [
     }
 ];
 const ARCHIVE_DATA = {
-    "Fall 2025": [
+    "2025 / 2026": [
         {
             sector: "Previous Analysts",
             pm: {
@@ -352,49 +626,6 @@ const ARCHIVE_DATA = {
                     name: "Parker Solem",
                     role: "Senior Analyst",
                     image: "/people/parker.jpg",
-                    description: ""
-                },
-                {
-                    name: "Past Senior 2",
-                    role: "Senior Analyst",
-                    image: "",
-                    description: ""
-                }
-            ],
-            juniors: [
-                {
-                    name: "Kavan Abeyratne",
-                    role: "Junior Analyst",
-                    image: "",
-                    description: ""
-                },
-                {
-                    name: "Past Junior 2",
-                    role: "Junior Analyst",
-                    image: "",
-                    description: ""
-                },
-                {
-                    name: "Past Junior 3",
-                    role: "Junior Analyst",
-                    image: "",
-                    description: ""
-                }
-            ]
-        },
-        {
-            sector: "Previous Analysts",
-            pm: {
-                name: "Historical PM",
-                role: "Portfolio Manager",
-                image: "",
-                description: ""
-            },
-            seniors: [
-                {
-                    name: "Past Senior",
-                    role: "Senior Analyst",
-                    image: "",
                     description: ""
                 },
                 {
@@ -427,7 +658,6 @@ const ARCHIVE_DATA = {
         }
     ]
 };
-// Premium custom easing for all animations
 const customEase = [
     0.22,
     1,
@@ -436,59 +666,25 @@ const customEase = [
 ];
 function ResearchCohort() {
     _s();
+    const [activeTerm, setActiveTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("Winter");
     const [openArchive, setOpenArchive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [openWif, setOpenWif] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "relative bg-[#0f1117] py-32 px-6 md:px-12 overflow-hidden border-t border-white/5",
         id: "analysts",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                animate: {
-                    scale: [
-                        1,
-                        1.05,
-                        1
-                    ],
-                    opacity: [
-                        0.08,
-                        0.12,
-                        0.08
-                    ]
-                },
-                transition: {
-                    duration: 12,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                },
-                className: "absolute top-0 left-0 w-[70%] h-[70%] bg-slate-800 rounded-full blur-[140px] pointer-events-none z-0"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-0 left-0 w-[70%] h-[70%] bg-slate-800 rounded-full blur-[140px] pointer-events-none z-0 opacity-10"
             }, void 0, false, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 163,
+                lineNumber: 252,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                animate: {
-                    scale: [
-                        1,
-                        1.1,
-                        1
-                    ],
-                    opacity: [
-                        0.03,
-                        0.06,
-                        0.03
-                    ]
-                },
-                transition: {
-                    duration: 15,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 2
-                },
-                className: "absolute bottom-0 right-0 w-[50%] h-[50%] bg-red-950 rounded-full blur-[160px] pointer-events-none z-0"
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-0 right-0 w-[50%] h-[50%] bg-red-950 rounded-full blur-[160px] pointer-events-none z-0 opacity-5"
             }, void 0, false, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 171,
+                lineNumber: 253,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,156 +699,154 @@ function ResearchCohort() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 180,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 opacity-[0.04] pointer-events-none z-0 mix-blend-overlay",
-                style: {
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`
-                }
-            }, void 0, false, {
-                fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 191,
+                lineNumber: 255,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative z-10 max-w-7xl mx-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mb-32",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                            initial: {
-                                opacity: 0,
-                                y: 30
-                            },
-                            whileInView: {
-                                opacity: 1,
-                                y: 0
-                            },
-                            viewport: {
-                                once: true,
-                                margin: "-100px"
-                            },
-                            //@ts-ignore
-                            transition: {
-                                duration: 0.8,
-                                ease: customEase
-                            },
-                            className: "space-y-6",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                            initial: {
-                                                width: 0
-                                            },
-                                            whileInView: {
-                                                width: 40
-                                            },
-                                            viewport: {
-                                                once: true
-                                            },
-                                            //@ts-ignore
-                                            transition: {
-                                                duration: 1,
-                                                ease: customEase,
-                                                delay: 0.2
-                                            },
-                                            className: "h-px bg-red-800"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 207,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block",
-                                            children: "Institutional Coverage"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 215,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 206,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-4xl md:text-7xl font-serif text-white tracking-tighter leading-[0.9] flex flex-wrap gap-x-6",
-                                    children: [
-                                        "The Winter Cohort ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-zinc-600 font-light italic",
-                                            children: "/"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 218,
-                                            columnNumber: 33
-                                        }, this),
-                                        " ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-zinc-400",
-                                            children: "2026"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 218,
-                                            columnNumber: 92
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 217,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                        className: "flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-32",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-6 max-w-xl",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "h-[1px] w-10 bg-red-800"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 273,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-red-700 font-sans font-bold text-[10px] uppercase tracking-[0.5em] block",
+                                                children: "Institutional Coverage"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 274,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/Analysts.tsx",
+                                        lineNumber: 272,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-4xl md:text-6xl font-serif text-white tracking-tighter leading-[0.9]",
+                                        children: [
+                                            "Research Cohorts ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-zinc-600 font-light italic",
+                                                children: "/"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 277,
+                                                columnNumber: 32
+                                            }, this),
+                                            " ",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-zinc-400",
+                                                children: "2026-2027"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 277,
+                                                columnNumber: 91
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/Analysts.tsx",
+                                        lineNumber: 276,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/Analysts.tsx",
+                                lineNumber: 271,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-[#14161d] border border-white/5 p-1.5 flex rounded-sm relative w-full md:w-auto overflow-hidden shadow-2xl",
+                                children: [
+                                    "Spring",
+                                    "Fall",
+                                    "Winter"
+                                ].map((term)=>{
+                                    const isActive = activeTerm === term;
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>setActiveTerm(term),
+                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative px-8 py-3.5 text-[10px] font-sans font-bold uppercase tracking-widest transition-colors duration-300 flex-1 md:flex-none z-10 whitespace-nowrap", isActive ? "text-white" : "text-zinc-500 hover:text-zinc-300"),
+                                        children: [
+                                            isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                                layoutId: "activeCohortTab",
+                                                className: "absolute inset-0 bg-[#1d202b] border border-white/5 shadow-lg rounded-sm z-0",
+                                                transition: {
+                                                    type: "spring",
+                                                    stiffness: 400,
+                                                    damping: 32
+                                                }
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 295,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "relative z-10 flex items-center justify-center gap-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
+                                                        size: 11,
+                                                        className: isActive ? "text-red-700" : "text-zinc-600"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Analysts.tsx",
+                                                        lineNumber: 302,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    term
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Analysts.tsx",
+                                                lineNumber: 301,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, `tab-${term}`, true, {
+                                        fileName: "[project]/components/Analysts.tsx",
+                                        lineNumber: 286,
+                                        columnNumber: 17
+                                    }, this);
+                                })
+                            }, void 0, false, {
+                                fileName: "[project]/components/Analysts.tsx",
+                                lineNumber: 282,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/Analysts.tsx",
+                        lineNumber: 270,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "min-h-[400px] w-full",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CohortTermView, {
+                            activeTerm: activeTerm
+                        }, void 0, false, {
                             fileName: "[project]/components/Analysts.tsx",
-                            lineNumber: 198,
+                            lineNumber: 313,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 197,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-28",
-                        children: COHORT_DATA.map((pod, pIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectorPod, {
-                                pod: pod,
-                                podIndex: pIdx
-                            }, pIdx, false, {
-                                fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 226,
-                                columnNumber: 13
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 224,
+                        lineNumber: 312,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mt-64 border-t border-white/5 pt-20",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0,
-                                    y: 20
-                                },
-                                whileInView: {
-                                    opacity: 1,
-                                    y: 0
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                //@ts-ignore
-                                transition: {
-                                    duration: 0.8,
-                                    ease: customEase
-                                },
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
@@ -661,7 +855,7 @@ function ResearchCohort() {
                                             children: "Internal Initiatives"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 241,
+                                            lineNumber: 320,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -669,22 +863,21 @@ function ResearchCohort() {
                                             children: "Women in Finance"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 242,
+                                            lineNumber: 321,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 240,
+                                    lineNumber: 319,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 232,
+                                lineNumber: 318,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                mode: "wait",
                                 children: openWif && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                     initial: {
                                         opacity: 0,
@@ -700,7 +893,7 @@ function ResearchCohort() {
                                     },
                                     //@ts-ignore
                                     transition: {
-                                        duration: 0.6,
+                                        duration: 0.5,
                                         ease: customEase
                                     },
                                     className: "overflow-hidden",
@@ -708,53 +901,37 @@ function ResearchCohort() {
                                         className: "py-20 space-y-32",
                                         children: WIF_DATA.map((pod, pIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectorPod, {
                                                 pod: pod,
-                                                podIndex: pIdx
-                                            }, `wif-${pIdx}`, false, {
+                                                termCtx: "WIF"
+                                            }, `wif-pod-${pIdx}`, false, {
                                                 fileName: "[project]/components/Analysts.tsx",
-                                                lineNumber: 258,
+                                                lineNumber: 337,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 256,
+                                        lineNumber: 335,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 248,
+                                    lineNumber: 327,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 246,
+                                lineNumber: 325,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 231,
+                        lineNumber: 317,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mt-32 border-t border-white/5 pt-20",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0,
-                                    y: 20
-                                },
-                                whileInView: {
-                                    opacity: 1,
-                                    y: 0
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                //@ts-ignore
-                                transition: {
-                                    duration: 0.8,
-                                    ease: customEase
-                                },
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -764,28 +941,28 @@ function ResearchCohort() {
                                                 children: "Historical Records"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Analysts.tsx",
-                                                lineNumber: 277,
+                                                lineNumber: 349,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                 className: "text-3xl font-serif text-white tracking-tight italic",
-                                                children: "Previous Analyst Cohorts"
+                                                children: "Previous Academic Years"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Analysts.tsx",
-                                                lineNumber: 278,
+                                                lineNumber: 350,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 348,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative inline-block w-full md:w-64",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>setOpenArchive(openArchive === "Fall 2025" ? null : "Fall 2025"),
-                                            className: "w-full bg-[#1a1c23] border border-white/10 px-6 py-4 flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-widest text-zinc-300 hover:border-red-800/50 transition-all",
+                                            onClick: ()=>setOpenArchive(openArchive === "2025 / 2026" ? null : "2025 / 2026"),
+                                            className: "w-full bg-[#1a1c23] border border-white/10 px-6 py-4 flex items-center justify-between text-[10px] font-sans font-bold uppercase tracking-widest text-zinc-300 hover:border-red-800/50 transition-all rounded-sm",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "flex items-center gap-2",
@@ -795,14 +972,14 @@ function ResearchCohort() {
                                                             className: "text-red-800"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/Analysts.tsx",
-                                                            lineNumber: 286,
+                                                            lineNumber: 358,
                                                             columnNumber: 59
                                                         }, this),
-                                                        " Fall 25 Cohort"
+                                                        " 25 / 26 Registry"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/Analysts.tsx",
-                                                    lineNumber: 286,
+                                                    lineNumber: 358,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
@@ -810,28 +987,27 @@ function ResearchCohort() {
                                                     className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("transition-transform duration-500 ease-[0.22,1,0.36,1]", openArchive && "rotate-180")
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Analysts.tsx",
-                                                    lineNumber: 287,
+                                                    lineNumber: 359,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 354,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 281,
+                                        lineNumber: 353,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 268,
+                                lineNumber: 347,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                                mode: "wait",
                                 children: openArchive && openArchive in ARCHIVE_DATA && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                     initial: {
                                         opacity: 0,
@@ -847,7 +1023,7 @@ function ResearchCohort() {
                                     },
                                     //@ts-ignore
                                     transition: {
-                                        duration: 0.6,
+                                        duration: 0.5,
                                         ease: customEase
                                     },
                                     className: "overflow-hidden",
@@ -855,77 +1031,104 @@ function ResearchCohort() {
                                         className: "py-20 space-y-32",
                                         children: ARCHIVE_DATA[openArchive].map((pod, pIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectorPod, {
                                                 pod: pod,
-                                                podIndex: pIdx,
+                                                termCtx: openArchive,
                                                 isArchive: true
-                                            }, `archive-${pIdx}`, false, {
+                                            }, `archive-${openArchive}-${pIdx}`, false, {
                                                 fileName: "[project]/components/Analysts.tsx",
-                                                lineNumber: 304,
+                                                lineNumber: 376,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 374,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 294,
+                                    lineNumber: 366,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 292,
+                                lineNumber: 364,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 267,
+                        lineNumber: 346,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 194,
+                lineNumber: 267,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Analysts.tsx",
-        lineNumber: 160,
+        lineNumber: 249,
         columnNumber: 5
     }, this);
 }
-_s(ResearchCohort, "Oi2pD2QOGL/KYDQpYOFN4hoC61g=");
+_s(ResearchCohort, "ODz5aBQtbI2eP5n7+MPgckvhHf4=");
 _c = ResearchCohort;
-/* ===================== SECTOR POD SUB-COMPONENT ===================== */ function SectorPod({ pod, podIndex = 0, isArchive = false }) {
-    // For archives, we merge all members into a single array for equality
+/* ===================== COHORT TERM VIEW PORTAL COMPONENT ===================== */ function CohortTermView({ activeTerm }) {
+    const currentCohort = SEASONAL_COHORT_DATA[activeTerm];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+        mode: "wait",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+            initial: {
+                opacity: 0,
+                y: 12
+            },
+            animate: {
+                opacity: 1,
+                y: 0
+            },
+            exit: {
+                opacity: 0,
+                y: -12
+            },
+            transition: {
+                duration: 0.22,
+                ease: "easeInOut"
+            },
+            className: "space-y-28 w-full",
+            children: currentCohort.map((pod, pIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SectorPod, {
+                    pod: pod,
+                    termCtx: activeTerm
+                }, `pod-${activeTerm}-${pod.sector}-${pIdx}`, false, {
+                    fileName: "[project]/components/Analysts.tsx",
+                    lineNumber: 405,
+                    columnNumber: 11
+                }, this))
+        }, `term-view-${activeTerm}`, false, {
+            fileName: "[project]/components/Analysts.tsx",
+            lineNumber: 396,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/components/Analysts.tsx",
+        lineNumber: 395,
+        columnNumber: 5
+    }, this);
+}
+_c1 = CohortTermView;
+/* ===================== SECTOR POD SUB-COMPONENT ===================== */ function SectorPod({ pod, termCtx, isArchive = false }) {
     const allMembers = isArchive ? [
         pod.pm,
         ...pod.seniors,
         ...pod.juniors
     ] : [];
+    // Clean checks to filter empty fields or structural vacancies
+    const isVacantPm = !pod.pm || pod.pm.name?.toLowerCase().includes("vacant");
+    const hasNoAnalysts = pod.seniors.length === 0 && pod.juniors.length === 0;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative", isArchive && "opacity-60 hover:opacity-100 transition-opacity duration-500"),
         children: [
-            pod.sector && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                initial: {
-                    opacity: 0,
-                    x: -20
-                },
-                whileInView: {
-                    opacity: 1,
-                    x: 0
-                },
-                viewport: {
-                    once: true,
-                    margin: "-50px"
-                },
-                //@ts-ignore
-                transition: {
-                    duration: 0.6,
-                    ease: customEase
-                },
+            pod.sector && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex items-center gap-6 mb-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -936,7 +1139,7 @@ _c = ResearchCohort;
                                 className: isArchive ? "text-zinc-500" : "text-red-800"
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 339,
+                                lineNumber: 431,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -944,64 +1147,50 @@ _c = ResearchCohort;
                                 children: pod.sector
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 340,
+                                lineNumber: 432,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 338,
+                        lineNumber: 430,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "h-[1px] flex-1 bg-gradient-to-r from-white/5 via-white/5 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 342,
+                        lineNumber: 434,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 330,
+                lineNumber: 429,
                 columnNumber: 9
             }, this),
-            isArchive ? /* ARCHIVE VIEW: Flat Equality Grid */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            isArchive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8",
                 children: allMembers.map((member, mIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MemberCard, {
                         member: member,
-                        delay: mIdx * 0.05,
-                        // Flip to left side tooltip for the last 3 items in a 6-col grid to prevent screen overflow
+                        delay: mIdx * 0.02,
                         alignPopover: mIdx % 6 >= 3 ? "left" : "right"
-                    }, mIdx, false, {
+                    }, `member-${termCtx}-${pod.sector}-${member.name}-${mIdx}`, false, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 350,
+                        lineNumber: 441,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 348,
+                lineNumber: 439,
                 columnNumber: 9
-            }, this) : /* ACTIVE VIEW: Hierarchical Grid */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 lg:grid-cols-12 gap-16 items-start",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "lg:col-span-3",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0
-                                },
-                                whileInView: {
-                                    opacity: 1
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                transition: {
-                                    duration: 0.6,
-                                    delay: 0.1
-                                },
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-8 flex items-center gap-3",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__["Target"], {
@@ -1009,7 +1198,7 @@ _c = ResearchCohort;
                                         className: "text-red-800"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 370,
+                                        lineNumber: 453,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1017,48 +1206,49 @@ _c = ResearchCohort;
                                         children: "Pod Leader"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 371,
+                                        lineNumber: 454,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 363,
+                                lineNumber: 452,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MemberCard, {
-                                member: pod.pm,
-                                featured: true,
-                                delay: 0.1,
-                                alignPopover: "right"
+                            isVacantPm ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "border border-white/5 bg-[#12131a] p-8 rounded-sm aspect-[4/5] flex items-center justify-center border-dashed",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-zinc-600 font-sans uppercase tracking-widest text-[9px] font-bold",
+                                    children: "Unassigned"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Analysts.tsx",
+                                    lineNumber: 458,
+                                    columnNumber: 17
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 373,
-                                columnNumber: 13
+                                lineNumber: 457,
+                                columnNumber: 15
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MemberCard, {
+                                member: pod.pm,
+                                featured: true,
+                                delay: 0.01,
+                                alignPopover: "right"
+                            }, `pm-${termCtx}-${pod.sector}-${pod.pm.name}`, false, {
+                                fileName: "[project]/components/Analysts.tsx",
+                                lineNumber: 461,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 362,
+                        lineNumber: 451,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "lg:col-span-9",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    opacity: 0
-                                },
-                                whileInView: {
-                                    opacity: 1
-                                },
-                                viewport: {
-                                    once: true
-                                },
-                                transition: {
-                                    duration: 0.6,
-                                    delay: 0.2
-                                },
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-8 flex items-center gap-3",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"], {
@@ -1066,7 +1256,7 @@ _c = ResearchCohort;
                                         className: "text-zinc-600"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 384,
+                                        lineNumber: 473,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1074,67 +1264,80 @@ _c = ResearchCohort;
                                         children: "Analysts"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Analysts.tsx",
-                                        lineNumber: 385,
+                                        lineNumber: 474,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 377,
+                                lineNumber: 472,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            hasNoAnalysts ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "border border-white/5 bg-[#12131a]/40 p-12 rounded-sm border-dashed",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-zinc-600 font-sans italic text-[11px]",
+                                    children: "No analyst positions active for this term window."
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Analysts.tsx",
+                                    lineNumber: 479,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/Analysts.tsx",
+                                lineNumber: 478,
+                                columnNumber: 15
+                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8",
                                 children: [
                                     pod.seniors.map((senior, sIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MemberCard, {
                                             member: senior,
-                                            delay: 0.2 + sIdx * 0.1,
-                                            // In a 5-col grid, the last 2 items should pop tooltip to the left
+                                            delay: 0.02 + sIdx * 0.01,
                                             alignPopover: sIdx % 5 >= 3 ? "left" : "right"
-                                        }, `senior-${sIdx}`, false, {
+                                        }, `sr-${termCtx}-${pod.sector}-${senior.name}-${sIdx}`, false, {
                                             fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 389,
-                                            columnNumber: 17
+                                            lineNumber: 484,
+                                            columnNumber: 19
                                         }, this)),
                                     pod.juniors.map((junior, jIdx)=>{
                                         const overallIdx = pod.seniors.length + jIdx;
                                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MemberCard, {
                                             member: junior,
                                             isJunior: true,
-                                            delay: 0.2 + overallIdx * 0.1,
+                                            delay: 0.02 + overallIdx * 0.01,
                                             alignPopover: overallIdx % 5 >= 3 ? "left" : "right"
-                                        }, `junior-${jIdx}`, false, {
+                                        }, `jr-${termCtx}-${pod.sector}-${junior.name}-${jIdx}`, false, {
                                             fileName: "[project]/components/Analysts.tsx",
-                                            lineNumber: 400,
-                                            columnNumber: 19
+                                            lineNumber: 494,
+                                            columnNumber: 21
                                         }, this);
                                     })
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 387,
-                                columnNumber: 13
+                                lineNumber: 482,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 376,
+                        lineNumber: 471,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 361,
+                lineNumber: 450,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Analysts.tsx",
-        lineNumber: 326,
+        lineNumber: 426,
         columnNumber: 5
     }, this);
 }
-_c1 = SectorPod;
+_c2 = SectorPod;
 /* ===================== MEMBER CARD COMPONENT ===================== */ function MemberCard({ member, featured = false, isJunior = false, delay = 0, alignPopover = "right" }) {
     _s1();
     const [isHovered, setIsHovered] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1142,25 +1345,17 @@ _c1 = SectorPod;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
         initial: {
             opacity: 0,
-            y: 30,
-            scale: 0.96
+            scale: 0.98
         },
-        whileInView: {
+        animate: {
             opacity: 1,
-            y: 0,
             scale: 1
         },
-        viewport: {
-            once: true,
-            margin: "-50px"
-        },
-        //@ts-ignore
         transition: {
-            duration: 0.7,
+            duration: 0.3,
             ease: customEase,
             delay
         },
-        // Z-index dynamically elevates so the side-tooltip never gets clipped by neighboring cards
         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative", isHovered ? "z-50" : "z-10"),
         onMouseEnter: ()=>setIsHovered(true),
         onMouseLeave: ()=>setIsHovered(false),
@@ -1169,7 +1364,7 @@ _c1 = SectorPod;
                 className: "group",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative bg-[#1a1c23] overflow-hidden border border-white/5 transition-all duration-700 group-hover:border-red-900/40 shadow-2xl aspect-[4/5]", featured && "ring-1 ring-white/10"),
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative bg-[#1a1c23] overflow-hidden border border-white/5 transition-all duration-700 group-hover:border-red-900/40 shadow-2xl aspect-[4/5] rounded-sm", featured && "ring-1 ring-white/10"),
                         children: [
                             member.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 src: member.image,
@@ -1178,7 +1373,7 @@ _c1 = SectorPod;
                                 className: "object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 454,
+                                lineNumber: 545,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 flex items-center justify-center text-zinc-800",
@@ -1187,50 +1382,50 @@ _c1 = SectorPod;
                                     strokeWidth: 0.5
                                 }, void 0, false, {
                                     fileName: "[project]/components/Analysts.tsx",
-                                    lineNumber: 457,
+                                    lineNumber: 548,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 456,
+                                lineNumber: 547,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-3 left-3 w-2 h-2 border-t border-l border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 462,
+                                lineNumber: 552,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-3 right-3 w-2 h-2 border-b border-r border-white/10 group-hover:border-red-800 transition-colors duration-500 z-20 pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 463,
+                                lineNumber: 553,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-0 left-0 h-1 w-0 bg-red-800 transition-all duration-700 ease-[0.22,1,0.36,1] group-hover:w-full z-20 shadow-[0_0_15px_rgba(153,27,27,0.5)] pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 464,
+                                lineNumber: 554,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 448,
+                        lineNumber: 540,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mt-5 space-y-1 relative z-30",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("font-serif text-zinc-100 group-hover:text-white transition-colors duration-300", featured ? "text-2xl md:text-3xl" : "text-[15px] md:text-md"),
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("font-serif text-zinc-100 group-hover:text-white transition-colors duration-300", featured ? "text-xl md:text-2xl" : "text-[14px] md:text-md"),
                                 children: member.name
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 469,
+                                lineNumber: 558,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1238,27 +1433,27 @@ _c1 = SectorPod;
                                 children: member.role
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 472,
+                                lineNumber: 561,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 468,
+                        lineNumber: 557,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 447,
+                lineNumber: 539,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                 children: isHovered && member.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
                         opacity: 0,
-                        x: isLeft ? 10 : -10,
-                        scale: 0.95
+                        x: isLeft ? 8 : -8,
+                        scale: 0.96
                     },
                     animate: {
                         opacity: 1,
@@ -1267,27 +1462,23 @@ _c1 = SectorPod;
                     },
                     exit: {
                         opacity: 0,
-                        x: isLeft ? 5 : -5,
+                        x: isLeft ? 4 : -4,
                         scale: 0.98
                     },
                     //@ts-ignore
                     transition: {
-                        duration: 0.3,
-                        ease: customEase
+                        duration: 0.15,
+                        ease: "easeOut"
                     },
-                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("absolute z-[100] pointer-events-none", // On Mobile: drop down below the card
-                    "top-full left-0 right-0 mt-4", // On Desktop: sleek side panel
-                    "md:top-0 md:mt-0 md:w-[320px]", isLeft ? "md:right-full md:mr-6 md:left-auto" : "md:left-full md:ml-6 md:right-auto"),
+                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("absolute z-[100] pointer-events-none", "top-full left-0 right-0 mt-4", "md:top-0 md:mt-0 md:w-[320px]", isLeft ? "md:right-full md:mr-6 md:left-auto" : "md:left-full md:ml-6 md:right-auto"),
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative p-6 bg-[#13151b]/95 border border-red-900/30 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] rounded-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("absolute bg-[#13151b] border-red-900/30 rotate-45", // Mobile Triangle (pointing up)
-                                "-top-1.5 left-8 w-3 h-3 border-l border-t md:hidden", // Desktop Triangle (pointing left or right)
-                                "md:block md:top-8 md:-top-auto md:w-3 md:h-3", isLeft ? "md:-right-1.5 md:left-auto md:border-r md:border-t md:border-l-0 md:border-b-0" : "md:-left-1.5 md:right-auto md:border-l md:border-b md:border-r-0 md:border-t-0")
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("absolute bg-[#13151b] border-red-900/30 rotate-45", "-top-1.5 left-8 w-3 h-3 border-l border-t md:hidden", "md:block md:top-8 md:-top-auto md:w-3 md:h-3", isLeft ? "md:-right-1.5 md:left-auto md:border-r md:border-t md:border-l-0 md:border-b-0" : "md:-left-1.5 md:right-auto md:border-l md:border-b md:border-r-0 md:border-t-0")
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 499,
+                                lineNumber: 583,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1295,38 +1486,39 @@ _c1 = SectorPod;
                                 children: member.description
                             }, void 0, false, {
                                 fileName: "[project]/components/Analysts.tsx",
-                                lineNumber: 510,
+                                lineNumber: 592,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Analysts.tsx",
-                        lineNumber: 496,
+                        lineNumber: 582,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Analysts.tsx",
-                    lineNumber: 481,
+                    lineNumber: 569,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Analysts.tsx",
-                lineNumber: 479,
+                lineNumber: 567,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Analysts.tsx",
-        lineNumber: 436,
+        lineNumber: 531,
         columnNumber: 5
     }, this);
 }
 _s1(MemberCard, "FPQn8a98tPjpohC7NUYORQR8GJE=");
-_c2 = MemberCard;
-var _c, _c1, _c2;
+_c3 = MemberCard;
+var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "ResearchCohort");
-__turbopack_context__.k.register(_c1, "SectorPod");
-__turbopack_context__.k.register(_c2, "MemberCard");
+__turbopack_context__.k.register(_c1, "CohortTermView");
+__turbopack_context__.k.register(_c2, "SectorPod");
+__turbopack_context__.k.register(_c3, "MemberCard");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
