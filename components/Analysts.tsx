@@ -531,6 +531,7 @@ function MemberCard({
     <motion.div 
       initial={{ opacity: 0, scale: 0.98 }} 
       animate={{ opacity: 1, scale: 1 }}
+      //@ts-ignore
       transition={{ duration: 0.3, ease: customEase, delay }}
       className={clsx("relative", isHovered ? "z-50" : "z-10")} 
       onMouseEnter={() => setIsHovered(true)}
